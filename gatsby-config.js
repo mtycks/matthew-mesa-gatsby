@@ -2,17 +2,25 @@ module.exports = {
   siteMetadata: {
     title: `Matt's first Gatsby.js Site`,
     description: `Learning how to build a site using Gatsby.js!`,
-    author: `@gatsbyjs`,
+    author: `Matthew Mesa`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     'gatsby-plugin-sass',
     'gatsby-plugin-catch-links',
+    'gatsby-transformer-remark',
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `pages`,
+        path: `${__dirname}/src/pages`,
       },
     },
     `gatsby-transformer-sharp`,
