@@ -2,7 +2,6 @@
 title: "Second Post - Components"
 date: 2019-10-10 14:55:00
 author: "Matthew Mesa"
-path: "/second-post"
 image: ../../images/sun_catcher.jpg
 tags:
 - los angeles

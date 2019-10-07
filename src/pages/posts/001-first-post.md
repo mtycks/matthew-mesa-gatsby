@@ -2,7 +2,6 @@
 title: "First Post - Introduction"
 date: 2019-10-01 14:42:00
 author: "Matthew Mesa"
-path: "/first-post"
 image: ../../images/sam_silhouette.jpg
 tags: 
 - silhouette

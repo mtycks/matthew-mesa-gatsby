@@ -2,7 +2,6 @@
 title: "Third Post - Plugins"
 date: 2019-10-06 15:22:00
 author: "Matthew Mesa"
-path: "/third-post"
 image: ../../images/sam_clouds.jpg
 tags:
 - camera
