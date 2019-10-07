@@ -16,7 +16,6 @@ const IndexPage = () => (
 
       <StaticQuery query={indexQuery} render={data => {
 
-
         return (
           <div>
             {data.allMarkdownRemark.edges.map(({ node }) =>(
@@ -26,6 +25,7 @@ const IndexPage = () => (
                 date={node.frontmatter.date}
                 body={node.excerpt} 
                 fluid={node.frontmatter.image.childImageSharp.fluid}
+                tags={node.frontmatter.tags}
               />
             ))}
           </div>
@@ -55,6 +55,7 @@ query{
           date(formatString: "MMM D, YYYY")
           author
           path
+          tags
           image {
             childImageSharp{
               fluid(maxWidth: 1200){

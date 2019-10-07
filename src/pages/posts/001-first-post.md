@@ -4,6 +4,10 @@ date: 2019-10-01 14:42:00
 author: "Matthew Mesa"
 path: "/first-post"
 image: ../../images/sam_silhouette.jpg
+tags: 
+- silhouette
+- los angeles
+- inside
 ---
 
 Welcome to my first ever Gatsby.js blog post. I really hope you enjoy this awesome content. The following will be some really cool lorem ipsum text.
