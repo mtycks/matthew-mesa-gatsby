@@ -1,5 +1,6 @@
 const { slugify } = require('./util/utilityFunctions')
 const path = require('path')
+const _ = require('lodash') 
 
 exports.onCreateNode = ({ node, actions }) => {
 
@@ -20,8 +21,12 @@ exports.onCreateNode = ({ node, actions }) => {
 
 exports.createPages = ({ actions, graphql}) => {
 
-    const { createPage} = actions;
-    const singlePostTemplate = path.resolve('src/templates/single-post.js')
+    const { createPage } = actions;
+
+    const templates = {
+        singlePost: path.resolve('src/templates/single-post.js'),
+        tagsPage: path.resolve('src/templates/tags-page.js')
+    }
 
     return graphql(`
     
@@ -50,7 +55,7 @@ exports.createPages = ({ actions, graphql}) => {
 
             createPage({
                 path: node.fields.slug,
-                component: singlePostTemplate,
+                component: templates.singlePost,
                 context: {
                     //Passing slug for template to use to get post
                     slug: node.fields.slug
@@ -58,6 +63,33 @@ exports.createPages = ({ actions, graphql}) => {
             })
 
         })
+
+        // Get all tags
+        // the underscore is a lodash function
+        let tags = []
+        _.each(posts, edge =>{
+            if(_.get(edge, 'node.frontmatter.tags')){
+                tags = tags.concat(edge.node.frontmatter.tags)
+            }
+        })
+
+        let tagPostCounts = {}
+        tags.forEach(tag =>{
+            tagPostCounts[tag] = (tagPostCounts[tag] || 0) + 1;
+        })
+
+        tags = _.uniq(tags)
+
+        //Create tags page
+        createPage({
+            path: `/tags`,
+            component: templates.tagsPage,
+            context: {
+                tags,
+                tagPostCounts
+            }
+        })
+
     })
 
 }
