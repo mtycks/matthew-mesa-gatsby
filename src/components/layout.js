@@ -9,7 +9,6 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
-import Header from "./header"
 import '../styles/index.scss'
 
 const Layout = ({ children }) => {
@@ -25,14 +24,28 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <div className="container" id="content"
-      >
+      <div className="full-width" id="content">
         <main>{children}</main>
         <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
+
+          <div className="container">
+		    
+          <div className="row">
+            
+            <div className="col-12">
+              
+              <div className="text-center pt-5">
+                <p className="museo-700" style={ {color: '#51566e', marginBottom: '.25rem'} }>resume &bull; contact &bull; about | &copy; matthewmesa.com</p>
+                <p>web dev &bull; social media &bull; graphic design &bull; photo &bull; video</p>
+              </div>
+              
+            </div>
+            
+          </div>
+          
+        </div>
+
+
         </footer>
       </div>
     </>
