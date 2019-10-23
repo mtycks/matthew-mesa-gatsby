@@ -30,11 +30,11 @@ const IndexPage = ({ data }) => (
 			<h1>matthew mesa</h1>
 			
 			<ul className="list-unstyled">
-				<li>web dev</li>
-				<li>social media</li>
-				<li>graphic design</li>
-				<li>photo</li>
-				<li>video </li>
+        <li><Link to={`/tag/graphic-design`}>graphic design</Link></li>
+				<li><Link to={`/tag/photo`}>photo</Link></li>
+        <li><Link to={`/tag/social-media`}>social media</Link></li>
+				<li><Link to={`/tag/video`}>video</Link></li>
+        <li><Link to={`/tag/web-dev`}>web dev</Link></li>
 			</ul>
 			
 		</div>
@@ -46,6 +46,15 @@ const IndexPage = ({ data }) => (
     <SEO title="Home" />
 
     <Col xs={{ size: 12, offset: 0 }}>
+
+      <div className="text-center pt-2">
+
+      <p className="lead">Hi, I'm Matthew Mesa and <br className="d-block d-sm-none" />I'm looking for a job.</p>
+      <p>Professionally, I’ve been a web developer, social media manager, graphic designer, photographer, video editor and writer. I used to work for the Los Angeles Dodgers and Zuno Studios, a small web design studio based in Signal Hill, CA.</p>
+      <p className="lead">Blah, blah, blah...I know you just want to see my work. So, here it is:</p>
+
+        
+      </div>
 
       <section id="hp_portfolio">
         <StaticQuery query={indexQuery} render={data => {
@@ -59,7 +68,7 @@ const IndexPage = ({ data }) => (
                   <Link to={`/portfolio/${slugify(node.fields.slug)}`} className="portfolio-item">			    
                     <Img fluid={node.frontmatter.thumbnail.childImageSharp.fluid} />
                   </Link>
-                  </Col>
+                </Col>
 
 
                 // <Post title={node.frontmatter.title}

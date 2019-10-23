@@ -1,14 +1,16 @@
 ---
-title: "Spring Training Photos"
+title: "Social Compilation Video"
 subtitle: "Los Angeles Dodgers"
 date: 2019-10-06 15:22:00
 author: "Matthew Mesa"
-image: ../../images/photos_spring_header.jpg
-thumbnail: ../../images/kenta.jpg
+image: ../../images/thompson_video_header.jpg
+thumbnail: ../../images/thompson_video_th.jpg
 mockup: ../../images/asg-iphone.png
-order: 4
+order: 5
+videoSourceURL: https://www.youtube.com/embed/dQw4w9WgXcQ
+videoTitle: Trayce Thompson Walk-off Home Run vs. Mets
 tags:
-- photo
+- video
 - social media
 ---
 

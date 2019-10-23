@@ -16,7 +16,7 @@ body {
 }
 
 .text-green{
-color:#39ff14 !important;
+color:$green !important;
 }
 
 p{
@@ -59,7 +59,9 @@ section#top picture img{
 }
 
 .menu-toggle{
-padding-bottom:.5rem;
+  padding-bottom:.5rem;
+  position:relative;
+  z-index:1000;
 }
 .menu-toggle .fa{
   font-size:2rem;
@@ -101,21 +103,27 @@ overflow:hidden;
   text-shadow:1px 3px 0px rgba(0,0,0,.44);
 }
 
-.text-box li{
+.text-box li,
+.text-box li a:link,
+.text-box li a:visited{
   color:#39ff14;
   font-family:'Museo-500';
   line-height:1.2;
 }
 
-
-section#hp_portfolio{
-
+.autoHeight{
+  height:auto !important;
 }
 
 section#hp_portfolio .portfolio-item{
   box-shadow:1px 3px 2px rgba(0,0,0,.24);
   display:block;
   margin-bottom:2rem;
+}
+
+.portfolio-item-title,
+.portfolio-item-subtitle{
+  text-transform: lowercase;;
 }
 
 .menu-toggle .mm_home:hover{
@@ -271,7 +279,27 @@ overflow:hidden !important;
 position:fixed;
 }
 
+.portfolio-header{
+  display:flex;
+  align-items:stretch;
+  flex-direction:column;
+  justify-content:center;
+  position:absolute;
+  height:100%;
+  width:100%;
+  left:0;
+  top:0;
+}
 
+  .text-box .portfolio-header h1{
+    font-size:3.75rem;
+    position:relative;
+  }
+
+footer a:link,
+footer a:visited{
+  color:$dark-gray;
+}
 
 #bg-loop {
   background: linear-gradient(-41deg, #005aea, #39ff14);
@@ -445,6 +473,12 @@ margin-top:-150px;
 }
 }
 
+
+
+// Bootstrap Style Overrides
+.badge-primary{
+  background-color:$blue !important;
+}
 
 
 @media(max-width:575px){

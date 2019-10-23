@@ -1,14 +1,13 @@
 module.exports = {
   siteMetadata: {
-    title: `Matt's first Gatsby.js Site`,
-    description: `Learning how to build a site using Gatsby.js!`,
+    title: `Matthew Mesa is looking for a job`,
+    description: `Welcome to MatthewMesa.com! I'm Matt; I wear a lot of hats (literally and figuratively) and I'm looking for a job.`,
     author: `Matthew Mesa`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     'gatsby-plugin-sass',
     'gatsby-plugin-catch-links',
-    'gatsby-transformer-remark',
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -25,6 +24,19 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1200,
+            },
+          },
+        ],
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

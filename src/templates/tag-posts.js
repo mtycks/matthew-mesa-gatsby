@@ -1,7 +1,12 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import Layout from '../components/layout'
 import Post from '../components/Post'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
+import Img from 'gatsby-image'
+import { Row, Col} from 'reactstrap'
+import { slugify } from '../../util/utilityFunctions'
 
 const tagPosts = ({ data, pageContext }) => {
 
@@ -12,19 +17,46 @@ const tagPosts = ({ data, pageContext }) => {
     return(
 
         <Layout>
-            <h1>{pageHeader}</h1>
-            {data.allMarkdownRemark.edges.map(({node}) => (
-                <Post key={node.id}
-                    slug={node.fields.slug}
-                    title={node.frontmatter.title}
-                    author={node.frontmatter.author}
-                    date={node.frontmatter.date}
-                    body={node.excerpt}
-                    tags={node.frontmatter.tags}
-                    fluid={node.frontmatter.image.childImageSharp.fluid}
-                    />
 
-            ))}
+            <section id="top" className="mb-3">
+                    
+                <Img className="card-image-top" fluid={data.header_img.childImageSharp.fluid} />
+                
+                <div className="text-box">
+                    
+                    <div className="menu-toggle">
+                        <FontAwesomeIcon icon={faBars} color="white" size="2x" className="menuOpen" /> <Link to="/" className="mm_home museo text-white float-right">&nbsp;matthewmesa.com</Link>
+                    </div>
+
+                    <div className="text-center portfolio-header">
+
+                        <h1 className="h2">{tag}</h1>
+
+                    </div>
+                    
+                </div>
+                
+            </section>
+
+            <section id="hp_portfolio">
+                <div className="container">
+                    <Row>
+                        
+                        {data.allMarkdownRemark.edges.map(({node}) => (
+
+                            <Col xs={{ size: 6, offset: 0 }} md={{ size: 3, offset: 0 }}>
+                                <Link to={`/portfolio/${slugify(node.fields.slug)}`} className="portfolio-item">			    
+                                    <Img fluid={node.frontmatter.thumbnail.childImageSharp.fluid} />
+                                </Link>
+                            </Col>
+
+                        ))}
+
+                    </Row>
+                </div>
+            </section>
+
+
         </Layout>
 
     )
@@ -34,6 +66,15 @@ const tagPosts = ({ data, pageContext }) => {
 export const tagQuery = graphql`
 
     query($tag: String!){
+
+        header_img: file(relativePath: { eq: "portfolio_tags_header.jpg" }) {
+            childImageSharp {
+              fluid(maxWidth: 1600, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+
         allMarkdownRemark(
             sort: { fields: [frontmatter___date], order: DESC }
             filter: { frontmatter: { tags: { in: [$tag] } } }
@@ -47,7 +88,7 @@ export const tagQuery = graphql`
                         date(formatString: "MMM D, YYYYY")
                         author
                         tags
-                        image{
+                        thumbnail{
                             childImageSharp{
                                 fluid(maxWidth: 1200){
                                     ...GatsbyImageSharpFluid

@@ -5,40 +5,79 @@ import SEO from '../components/seo'
 import { Row, Col, Card, CardBody, CardSubtitle, Badge } from 'reactstrap'
 import Img from 'gatsby-image'
 import { slugify } from '../../util/utilityFunctions'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
+import YouTubeEmbed from "../components/YouTube"
 
 const SinglePost = ({ data }) => {
 
     const post = data.markdownRemark.frontmatter
+    const video = post.videoSourceURL
 
     return (
 
         <Layout>
             <SEO title={post.title} />
-            <h1>{post.title}</h1>
-            <Row>
-                <Col md="12">
 
-                    <Card>
-                        <Img className="card-image-top" fluid={post.image.childImageSharp.fluid} />
-                        <CardBody>
-                            <CardSubtitle>
-                                <span className="text-info">{post.date}</span> by <span className="text-info">{post.author}</span>
-                            </CardSubtitle>
-                            <div dangerouslySetInnerHTML={ {__html: data.markdownRemark.html} } />
-                            <ul className="post-tags">
-                                {post.tags.map(tag => (
-                                    <li key={tag}>
-                                        <Link to={`/tag/${slugify(tag)}`}>
-                                            <Badge color="primary">{tag}</Badge>
-                                        </Link>
-                                    </li>
-                                ))}
-                            </ul>
-                        </CardBody>
-                    </Card>
+            <section id="top">
+		
+                <Img className="card-image-top" fluid={post.image.childImageSharp.fluid} />
+                
+                <div class="text-box autoHeight">
+                    
+                    <div class="menu-toggle">
+                        <FontAwesomeIcon icon={faBars} color="white" size="2x" className="menuOpen" /> <Link to="/" className="mm_home museo text-white float-right">&nbsp;matthewmesa.com</Link>
+                    </div>
+                    
+                </div>
+                
+            </section>
 
-                </Col>
-            </Row>
+            <div id="main" className="secondary-page">
+
+                <div className="container">
+
+                    <Row>
+                        <Col md="12">
+
+                        <div className="pb-3 pt-3">
+						
+                                <h2 className="museo text-white mb-0 portfolio-item-title">{post.title}</h2>
+                                <h5 className="museo text-green portfolio-item-subtitle mb-4">{post.subtitle}</h5>
+                                
+                                <p className="text-center">
+                                    <Img className="img-fluid" fluid={post.mockup.childImageSharp.fluid} />
+                                </p>
+                                
+                                
+                                {video && 
+
+                                    <YouTubeEmbed
+                                        videoSrcURL={data.markdownRemark.frontmatter.videoSourceURL}
+                                        videoTitle={data.markdownRemark.frontmatter.videoTitle}
+                                        />
+
+                                }
+
+                                <div dangerouslySetInnerHTML={ {__html: data.markdownRemark.html} } />
+
+                                <ul className="post-tags">
+                                    {post.tags.map(tag => (
+                                        <li key={tag}>
+                                            <Link to={`/tag/${slugify(tag)}`}>
+                                                <Badge color="primary">{tag}</Badge>
+                                            </Link>
+                                        </li>
+                                    ))}
+                                </ul>
+                                
+                            </div>
+
+                        </Col>
+                    </Row>
+
+                </div>
+            </div>
         </Layout>
 
     )
@@ -52,10 +91,20 @@ export const postQuery = graphql`
             html
             frontmatter{
                 title
+                subtitle
+                videoSourceURL
+                videoTitle
                 author
                 date(formatString: "MMM D, YYYY")
                 tags
                 image{
+                    childImageSharp{
+                        fluid(maxWidth: 1200){
+                            ...GatsbyImageSharpFluid
+                        }
+                    }
+                }
+                mockup{
                     childImageSharp{
                         fluid(maxWidth: 1200){
                             ...GatsbyImageSharpFluid

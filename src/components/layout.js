@@ -7,7 +7,7 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 
 import '../styles/index.scss'
 
@@ -36,7 +36,12 @@ const Layout = ({ children }) => {
               
               <div className="text-center pt-5">
                 <p className="museo-700" style={ {color: '#51566e', marginBottom: '.25rem'} }>resume &bull; contact &bull; about | &copy; matthewmesa.com</p>
-                <p>web dev &bull; social media &bull; graphic design &bull; photo &bull; video</p>
+                <p>
+                  <Link to={`/tag/graphic-design`}>graphic design</Link> &bull;&nbsp; 
+                  <Link to={`/tag/photo`}>photo</Link> &bull;&nbsp;
+                  <Link to={`/tag/social-media`}>social media</Link> &bull;&nbsp; 
+                  <Link to={`/tag/video`}>video</Link> &bull;&nbsp; 
+                  <Link to={`/tag/web-dev`}>web dev</Link></p>
               </div>
               
             </div>
