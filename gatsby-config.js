@@ -9,6 +9,12 @@ module.exports = {
     'gatsby-plugin-sass',
     'gatsby-plugin-catch-links',
     {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-130003690-5",
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,

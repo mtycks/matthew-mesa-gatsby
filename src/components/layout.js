@@ -39,13 +39,14 @@ const Layout = ({ children }) => {
               
               <div className="text-center pt-5">
                 <p className="museo-700" style={ {color: '#51566e', marginBottom: '.25rem'} }>
+                <small>&copy; matthewmesa.com</small><br />
                 <Link style={ {color: '#51566e'} } to={`/resume`}>resume</Link> &bull;&nbsp; 
                 <Link style={ {color: '#51566e'} } to={`/contact`}>contact</Link> &bull;&nbsp; 
-                <Link style={ {color: '#51566e'} } to={`about`}>about</Link> | &copy; matthewmesa.com</p>
+                <Link style={ {color: '#51566e'} } to={`about`}>about</Link></p>
                 <p>
                   <Link to={`/tag/graphic-design`}>graphic design</Link> &bull;&nbsp; 
                   <Link to={`/tag/photo`}>photo</Link> &bull;&nbsp;
-                  <Link to={`/tag/social-media`}>social media</Link> &bull;&nbsp; 
+                  <Link to={`/tag/social-media`}>social media</Link> <span className="d-none d-sm-inline-block">&bull;&nbsp;</span><br className="d-block d-sm-none" />
                   <Link to={`/tag/video`}>video</Link> &bull;&nbsp; 
                   <Link to={`/tag/web-dev`}>web dev</Link></p>
               </div>
