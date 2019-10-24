@@ -18,7 +18,7 @@ const ContactPage = ( {data} ) => (
 
             <div className="text-center portfolio-header">
 
-                <h1 className="h2">Contact Matt</h1>
+                <h1 className="h2 contact-header-title">Contact Matt</h1>
 
             </div>
             

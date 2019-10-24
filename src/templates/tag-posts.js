@@ -26,7 +26,7 @@ const tagPosts = ({ data, pageContext }) => {
 
                     <div className="text-center portfolio-header">
 
-                        <h1 className="h2">{tag}</h1>
+                        <h1 className="h2 tag-header-title">{tag}</h1>
 
                     </div>
                     
