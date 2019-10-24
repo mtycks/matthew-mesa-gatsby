@@ -8,8 +8,8 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql, Link } from "gatsby"
-
 import '../styles/index.scss'
+import MenuToggle from "../components/menuToggle"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -22,8 +22,11 @@ const Layout = ({ children }) => {
     }
   `)
 
+
+
   return (
     <>
+      <MenuToggle />
       <div className="full-width" id="content">
         <main>{children}</main>
         <footer>
@@ -35,7 +38,10 @@ const Layout = ({ children }) => {
             <div className="col-12">
               
               <div className="text-center pt-5">
-                <p className="museo-700" style={ {color: '#51566e', marginBottom: '.25rem'} }>resume &bull; contact &bull; about | &copy; matthewmesa.com</p>
+                <p className="museo-700" style={ {color: '#51566e', marginBottom: '.25rem'} }>
+                <Link style={ {color: '#51566e'} } to={`/resume`}>resume</Link> &bull;&nbsp; 
+                <Link style={ {color: '#51566e'} } to={`/contact`}>contact</Link> &bull;&nbsp; 
+                <Link style={ {color: '#51566e'} } to={`about`}>about</Link> | &copy; matthewmesa.com</p>
                 <p>
                   <Link to={`/tag/graphic-design`}>graphic design</Link> &bull;&nbsp; 
                   <Link to={`/tag/photo`}>photo</Link> &bull;&nbsp;
@@ -53,6 +59,9 @@ const Layout = ({ children }) => {
 
         </footer>
       </div>
+
+      
+
     </>
   )
 }

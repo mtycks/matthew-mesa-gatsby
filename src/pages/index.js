@@ -16,45 +16,60 @@ const IndexPage = ({ data }) => (
 
   <section id="top">
 
-  <Img className="img-fluid" fluid={data.image1.childImageSharp.fluid} alt="Matthew Mesa filming Los Angeles Dodgers' Justin Turner's walk-off home run in the 2017 NLCS vs. Chicago Cubs" />
+  <Img className="img-fluid d-block d-md-none" fluid={data.image1.childImageSharp.fluid} alt="Matthew Mesa filming Los Angeles Dodgers' Justin Turner's walk-off home run in the 2017 NLCS vs. Chicago Cubs" />
+  <Img className="img-fluid d-none d-md-block" fluid={data.wide_bg.childImageSharp.fluid} alt="Matthew Mesa filming Los Angeles Dodgers' Justin Turner's walk-off home run in the 2017 NLCS vs. Chicago Cubs" />
   <div className="mm_cutout">
-    <Img fluid={data.image2.childImageSharp.fluid} alt="Matthew Mesa filming Los Angeles Dodgers' Justin Turner's walk-off home run in the 2017 NLCS vs. Chicago Cubs" />
+    <Img className="d-block d-md-none" fluid={data.image2.childImageSharp.fluid} alt="Matthew Mesa filming Los Angeles Dodgers' Justin Turner's walk-off home run in the 2017 NLCS vs. Chicago Cubs" />
+    <Img className="d-none d-md-block" fluid={data.wide_cutout.childImageSharp.fluid} alt="Matthew Mesa filming Los Angeles Dodgers' Justin Turner's walk-off home run in the 2017 NLCS vs. Chicago Cubs" />
 	</div>
 
-		<div className="text-box bounce-in-top">
-			
-			<div className="menu-toggle">
-        <FontAwesomeIcon icon={faBars} color="white" size="2x" className="menuOpen" />
-			</div>
-			
-			<h1>matthew mesa</h1>
-			
-			<ul className="list-unstyled">
-        <li><Link to={`/tag/graphic-design`}>graphic design</Link></li>
-				<li><Link to={`/tag/photo`}>photo</Link></li>
-        <li><Link to={`/tag/social-media`}>social media</Link></li>
-				<li><Link to={`/tag/video`}>video</Link></li>
-        <li><Link to={`/tag/web-dev`}>web dev</Link></li>
-			</ul>
-			
-		</div>
+
+        <div className="text-box bounce-in-top pt-5">
+        <div className="container">
+          <Row>
+            <Col>
+              <h1 className="mt-3">matthew mesa</h1>
+          
+              <ul className="list-unstyled">
+                <li><Link to={`/tag/graphic-design`}>graphic design</Link></li>
+                <li><Link to={`/tag/photo`}>photo</Link></li>
+                <li><Link to={`/tag/social-media`}>social media</Link></li>
+                <li><Link to={`/tag/video`}>video</Link></li>
+                <li><Link to={`/tag/web-dev`}>web dev</Link></li>
+              </ul>
+              </Col>
+            </Row>
+          </div>
+        </div>
+
+
 		
 	</section>
 
+
   <div className="container pt-3 pb-3">
-    <Row>
+
     <SEO title="Home" />
 
-    <Col xs={{ size: 12, offset: 0 }}>
+    <Row>
 
-      <div className="text-center pt-2">
+    <Col>
 
-      <p className="lead">Hi, I'm Matthew Mesa and <br className="d-block d-sm-none" />I'm looking for a job.</p>
-      <p>Professionally, I’ve been a web developer, social media manager, graphic designer, photographer, video editor and writer. I used to work for the Los Angeles Dodgers and Zuno Studios, a small web design studio based in Signal Hill, CA.</p>
-      <p className="lead">Blah, blah, blah...I know you just want to see my work. So, here it is:</p>
+      <Row>
+        <Col md={{size:8, offset:2}}>
 
-        
-      </div>
+          <div className="text-center pt-2">
+
+            <p className="lead">Hi, I'm Matthew Mesa and <br className="d-block d-sm-none" />I'm looking for a job.</p>
+            <p>Professionally, I’ve been a web developer, social media manager, graphic designer, photographer, video editor and writer. I used to work for the Los Angeles Dodgers and Zuno Studios, a small web design studio based in Signal Hill, CA.</p>
+            <p>Personally, I'm a husband and father who just really loves to create cool stuff—hopefully my wife and son never get tired of me pointing a camera in their faces.</p>
+            <p className="lead">Blah, blah, blah...I know you just want to see my work. So, here it is:</p>
+
+          </div>
+
+
+        </Col>
+      </Row>
 
       <section id="hp_portfolio">
         <StaticQuery query={indexQuery} render={data => {
@@ -62,9 +77,9 @@ const IndexPage = ({ data }) => (
           return (
             <Row>
 
-              {data.allMarkdownRemark.edges.map(({ node }) =>(
+              {data.allMarkdownRemark.edges.map(({ node }, index) =>(
 
-                <Col xs={{ size: 6, offset: 0 }} md={{ size: 3, offset: 0 }}>
+                <Col key={index} xs={{ size: 6, offset: 0 }} md={{ size: 3, offset: 0 }}>
                   <Link to={`/portfolio/${slugify(node.fields.slug)}`} className="portfolio-item">			    
                     <Img fluid={node.frontmatter.thumbnail.childImageSharp.fluid} />
                   </Link>
@@ -140,6 +155,22 @@ query{
   }
 
   image2: file(relativePath: { eq: "header_bg_cutout.png" }) {
+    childImageSharp {
+      fluid(maxWidth: 1200) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+
+  wide_bg: file(relativePath: { eq: "header_wide_bg.jpg" }) {
+    childImageSharp {
+      fluid(maxWidth: 1200) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+
+  wide_cutout: file(relativePath: { eq: "header_wide_bg_cutout.png" }) {
     childImageSharp {
       fluid(maxWidth: 1200) {
         ...GatsbyImageSharpFluid

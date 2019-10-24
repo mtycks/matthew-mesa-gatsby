@@ -59,9 +59,12 @@ section#top picture img{
 }
 
 .menu-toggle{
-  padding-bottom:.5rem;
-  position:relative;
-  z-index:1000;
+  padding-bottom: .5rem;
+  position: absolute;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 .menu-toggle .fa{
   font-size:2rem;
@@ -83,7 +86,6 @@ overflow:hidden;
 }
 
 .text-box{
-  padding:1rem;
   position:absolute;
   top:0;
   left:0;
@@ -98,7 +100,7 @@ overflow:hidden;
 
 .text-box h1{
   font-family: 'Museo-700';
-  font-size:4.25rem;
+  font-size:5.25rem;
   line-height:.75;
   text-shadow:1px 3px 0px rgba(0,0,0,.44);
 }
@@ -152,7 +154,7 @@ width:25%;
 background-color:rgba(255,255,255,.9);
 height:100vh;
 left:0;
-position:absolute;
+position:fixed;
 top:0;
 width:100%;
 z-index:5000;
@@ -186,8 +188,9 @@ display:none;
 }
 
 .slide-out-top {
--webkit-animation: slide-out-top 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-        animation: slide-out-top 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+  display:none;
+  // -webkit-animation: slide-out-top 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+//         animation: slide-out-top 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 }
 
 
@@ -485,4 +488,39 @@ margin-top:-150px;
   #main{
 
   }
+}
+
+
+
+//Responsive stuff
+@media(min-width:768px){
+
+  .text-box h1{
+    font-size:6.25rem;
+  }
+
+}
+
+@media(min-width:992px){
+
+  .text-box h1{
+    font-size:8.25rem;
+  }
+
+  .card-image-top{
+    max-height:40vh;
+  } 
+
+    .card-image-top picture img{
+      object-position:center -10vh !important;
+    }
+
+}
+
+@media(min-width:1200px){
+
+  .text-box h1{
+    font-size:12.25rem;
+  }
+
 }

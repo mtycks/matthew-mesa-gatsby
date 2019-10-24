@@ -16,8 +16,6 @@ const tagsPage = ( {pageContext, data} ) => {
             <SEO title="All tags" keywords="{['tags', 'topics' ]}" />
 
             <section id="top">
-		
-                <Img className="card-image-top" fluid={data.fileName.childImageSharp.fluid} />
                 
                 <div class="text-box autoHeight">
                     

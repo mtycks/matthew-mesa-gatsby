@@ -22,11 +22,7 @@ const tagPosts = ({ data, pageContext }) => {
                     
                 <Img className="card-image-top" fluid={data.header_img.childImageSharp.fluid} />
                 
-                <div className="text-box">
-                    
-                    <div className="menu-toggle">
-                        <FontAwesomeIcon icon={faBars} color="white" size="2x" className="menuOpen" /> <Link to="/" className="mm_home museo text-white float-right">&nbsp;matthewmesa.com</Link>
-                    </div>
+                <div className="text-box pt-5">
 
                     <div className="text-center portfolio-header">
 
@@ -40,7 +36,7 @@ const tagPosts = ({ data, pageContext }) => {
 
             <section id="hp_portfolio">
                 <div className="container">
-                    <Row>
+                    <Row className="d-flex justify-content-center">
                         
                         {data.allMarkdownRemark.edges.map(({node}) => (
 

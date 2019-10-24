@@ -23,14 +23,6 @@ const SinglePost = ({ data }) => {
 		
                 <Img className="card-image-top" fluid={post.image.childImageSharp.fluid} />
                 
-                <div class="text-box autoHeight">
-                    
-                    <div class="menu-toggle">
-                        <FontAwesomeIcon icon={faBars} color="white" size="2x" className="menuOpen" /> <Link to="/" className="mm_home museo text-white float-right">&nbsp;matthewmesa.com</Link>
-                    </div>
-                    
-                </div>
-                
             </section>
 
             <div id="main" className="secondary-page">
