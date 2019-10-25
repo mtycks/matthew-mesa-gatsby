@@ -15,4 +15,4 @@ deploy:
   local_dir: public
   region: us-west-1
 after_deploy:
-  - travis-ci-cloudfront-invalidation -a $AWS_ACCESS_ID -s $AWS_SECRET_ID -c $CF_ID -i '/*' -b $TRAVIS_BRANCH -p $TRAVIS_PULL_REQUEST
+  - travis-ci-cloudfront-invalidation -a $AWS_KEY -s $AWS_SECRET -c $CF_ID -i '/*' -b $TRAVIS_BRANCH -p $TRAVIS_PULL_REQUEST
