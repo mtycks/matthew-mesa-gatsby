@@ -41,7 +41,7 @@ const SinglePost = ({ data }) => {
                                     <Img className="img-fluid" fluid={post.mockup.childImageSharp.fluid} />
                                 </p>
 
-                                <div dangerouslySetInnerHTML={ {__html: data.markdownRemark.html} } />
+                                <div dangerouslySetInnerHTML={ {__html: `<div>${data.markdownRemark.html}</div>`} } />
 
                                 <ul className="post-tags">
                                     {post.tags.map(tag => (
