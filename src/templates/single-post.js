@@ -37,11 +37,11 @@ const SinglePost = ({ data }) => {
                                 <h2 className="museo text-white mb-0 portfolio-item-title">{post.title}</h2>
                                 <h5 className="museo text-green portfolio-item-subtitle mb-4">{post.subtitle}</h5>
                                 
-                                <p className="text-center">
+                                <div className="text-center">
                                     <Img className="img-fluid" fluid={post.mockup.childImageSharp.fluid} />
-                                </p>
+                                </div>
 
-                                <div dangerouslySetInnerHTML={ {__html: `<div>${data.markdownRemark.html}</div>`} } />
+                                <div dangerouslySetInnerHTML={ {__html: data.markdownRemark.html} } />
 
                                 <ul className="post-tags">
                                     {post.tags.map(tag => (
