@@ -30,7 +30,7 @@ const SinglePost = ({ data }) => {
                 <div className="container">
 
                     <Row>
-                        <Col md="12">
+                        <Col md={{size:8, offset:2}}>
 
                         <div className="pb-3 pt-3">
 						
