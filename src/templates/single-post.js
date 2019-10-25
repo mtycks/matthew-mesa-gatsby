@@ -19,7 +19,7 @@ const SinglePost = ({ data }) => {
         <Layout>
             <SEO title={post.title} />
 
-            <section id="top">
+            <section id="top" className="portfolio-item">
 		
                 <Img className="card-image-top" fluid={post.image.childImageSharp.fluid} />
                 
