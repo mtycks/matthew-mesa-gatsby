@@ -8,16 +8,3 @@
 
 // gatsby-browser.js
 // Import the component at the top of the file
-
-exports.onClientEntry = () => {
-    window.onload = () => {
-
-        var main_menu = document.getElementById("main_menu");
-        console.log(main_menu);
-        if( main_menu ){
-            console.log(document.getElementById("main_menu").className);
-            document.getElementById("main_menu").className.replace('closed','');
-        }        
-
-    }
-  }

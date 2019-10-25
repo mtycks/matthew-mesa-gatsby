@@ -1,5 +1,7 @@
 import PropTypes from "prop-types"
 import React, { useState } from "react"
+import { config } from '@fortawesome/fontawesome-svg-core'
+config.autoAddCss = false
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'gatsby'
