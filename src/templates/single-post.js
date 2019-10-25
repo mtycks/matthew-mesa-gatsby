@@ -40,16 +40,6 @@ const SinglePost = ({ data }) => {
                                 <p className="text-center">
                                     <Img className="img-fluid" fluid={post.mockup.childImageSharp.fluid} />
                                 </p>
-                                
-                                
-                                {video && 
-
-                                    <YouTubeEmbed
-                                        videoSrcURL={data.markdownRemark.frontmatter.videoSourceURL}
-                                        videoTitle={data.markdownRemark.frontmatter.videoTitle}
-                                        />
-
-                                }
 
                                 <div dangerouslySetInnerHTML={ {__html: data.markdownRemark.html} } />
 
