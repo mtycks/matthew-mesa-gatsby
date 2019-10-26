@@ -56,11 +56,11 @@ const ResumePage = ({data}) => {
                   <div className="timeline-body p-4">
                     
                     <Row className="align-items-center">
-                      <Col xs="3">
+                      <Col xs={{size:6, offset:3}} sm={{size:3, offset:0}}>
                         <Img className="img-fluid rounded-circle" fluid={data.emem_digital.childImageSharp.fluid} />
                       </Col>
-                      <Col xs="9">
-                      <h5 className="museo resume-date"><FontAwesomeIcon icon={faBriefcase} color="#252734" /> &nbsp;December 2018 to present</h5>
+                      <Col xs="12" sm="9" className="resume-item-details">
+                        <h5 className="museo resume-date"><FontAwesomeIcon icon={faBriefcase} color="#252734" /> &nbsp;December 2018 to present</h5>
                         <h3 className="museo-700">Em Em Digital</h3>
                         <h4 className="museo">Owner &amp; Creative Director<br /><small>development, design, marketing, photography, video</small></h4>
                       </Col>
@@ -87,10 +87,10 @@ const ResumePage = ({data}) => {
                   <div className="timeline-body p-4">
                     
                     <Row className="align-items-center">
-                    <Col xs="3">
+                    <Col xs={{size:6, offset:3}} sm={{size:3, offset:0}}>
                         <Img className="img-fluid rounded-circle" fluid={data.zuno_studios.childImageSharp.fluid} />
                       </Col>                      
-                      <Col xs="9">
+                      <Col xs="12" sm="9" className="resume-item-details">
                         <h5 className="museo resume-date"><FontAwesomeIcon icon={faBriefcase} color="#252734" /> &nbsp;July 2018 to December 2018</h5>
                         <h3 className="museo-700">Zuno Studios</h3>
                         <h4 className="museo">Lead Web Developer<br /><small>CMS Development (Joomla &amp; WordPress)</small></h4>
@@ -113,10 +113,10 @@ const ResumePage = ({data}) => {
                   <div className="timeline-body p-4">
                     
                   <Row className="align-items-center">
-                      <Col xs="3">
+                      <Col xs={{size:6, offset:3}} sm={{size:3, offset:0}}>
                         <Img className="img-fluid rounded-circle" fluid={data.dodgers.childImageSharp.fluid} />
                       </Col>
-                      <Col xs="9">
+                      <Col xs="12" sm="9" className="resume-item-details">
                         <h5 className="museo resume-date"><FontAwesomeIcon icon={faBriefcase} color="#252734" /> &nbsp;January 2015 to June 2018</h5>
                         <h3 className="museo-700">Los Angeles Dodgers</h3>
                         <h4 className="museo">Manager, Social Media, Digital &amp; Print Content<br /><small>Previous: Coordinator, Social Media</small></h4>
@@ -149,10 +149,10 @@ const ResumePage = ({data}) => {
                   <div className="timeline-body p-4">
                     
                   <Row className="align-items-center">
-                      <Col xs="3">
+                      <Col xs={{size:6, offset:3}} sm={{size:3, offset:0}}>
                         <Img className="img-fluid rounded-circle" fluid={data.zuno_studios.childImageSharp.fluid} />
                       </Col>
-                      <Col xs="9">
+                      <Col xs="12" sm="9" className="resume-item-details">
                         <h5 className="museo resume-date"><FontAwesomeIcon icon={faBriefcase} color="#252734" /> &nbsp;June 2010 to December 2014</h5>
                         <h3 className="museo-700">Zuno Studios</h3>
                          <h4 className="museo">Web Developer<br /><small>Previous: Jr. Web Developer; Intern</small></h4>
@@ -179,10 +179,10 @@ const ResumePage = ({data}) => {
 
                   <div className="timeline-body p-4">
                     <Row className="align-items-center">
-                      <Col xs="3">
+                      <Col xs={{size:6, offset:3}} sm={{size:3, offset:0}}>
                         <Img className="img-fluid rounded-circle" fluid={data.csulb.childImageSharp.fluid} />
                       </Col>
-                      <Col xs="9">
+                      <Col xs="12" sm="9" className="resume-item-details">
                         <h5 className="museo resume-date"><FontAwesomeIcon icon={faGraduationCap} color="#252734" /> &nbsp;May 2010</h5>
                         <h3 className="museo-700">CSU Long Beach</h3>
                         <h4 className="museo">Bachelor of Arts, Journalism<br /><small>Minor: Philosophy</small></h4>
