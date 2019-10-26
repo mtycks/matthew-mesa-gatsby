@@ -9,7 +9,6 @@ import { config } from '@fortawesome/fontawesome-svg-core'
 config.autoAddCss = false
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBullseye, faGraduationCap, faBriefcase } from '@fortawesome/free-solid-svg-icons'
-import resumePDF from '../files/MESA-resume-2018.pdf'
 
 const ResumePage = ({data}) => {
 
