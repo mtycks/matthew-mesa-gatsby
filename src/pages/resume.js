@@ -2,9 +2,9 @@ import React, { useState } from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import '../styles/timeline.scss'
-import { Row, Col } from 'reactstrap'
+import { Row, Col, Button } from 'reactstrap'
 import Img from 'gatsby-image'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import { config } from '@fortawesome/fontawesome-svg-core'
 config.autoAddCss = false
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -34,20 +34,38 @@ const ResumePage = ({data}) => {
       </section>
 
       <div className="container">
+        <Row>
+          <Col md={{size:8, offset:2}}>
+            <div className="text-center pb-3 pt-3">
+              <h2 className="museo-700">Hi, I'm Matthew.</h2>
+              <p className="lead">Fusce tincidunt sem nec tincidunt tincidunt. Phasellus vel neque suscipit, dignissim lectus ut, volutpat sem. Aenean blandit felis vitae accumsan consequat. Fusce semper odio eu elit sagittis placerat.</p>
+              <p><Button tag={Link} to={`/contact`} color="primary">Contact Me</Button> &nbsp;<Link to={`/`}>Download Resume (PDF)</Link></p>
+            </div>
+          </Col>
+        </Row>
+      </div>
+
+      <div className="container-fluid">
           <ul className="timeline">
 
               <li>
-                <div className="timeline-badge primary"><a><FontAwesomeIcon icon={faBullseye} color="#C5C7C5" /></a></div>
+                <div className="timeline-badge primary"><a><FontAwesomeIcon icon={faBullseye} /></a></div>
 
                 <div className="timeline-panel">
-                  <div className="timeline-heading">
-                    <Img className="img-fluid" fluid={data.emem_digital.childImageSharp.fluid} />
-                  </div>
+
                   <div className="timeline-body p-4">
                     
-                    <h5 className="museo resume-date"><FontAwesomeIcon icon={faBriefcase} color="#252734" /> &nbsp;December 2018 to present</h5>
-                    <h3 className="museo-700">Em Em Digital</h3>
-                    <h4 className="museo">Owner &amp; Creative Director</h4>
+                    <Row className="align-items-center">
+                      <Col xs="3">
+                        <Img className="img-fluid rounded-circle" fluid={data.emem_digital.childImageSharp.fluid} />
+                      </Col>
+                      <Col xs="9">
+                      <h5 className="museo resume-date"><FontAwesomeIcon icon={faBriefcase} color="#252734" /> &nbsp;December 2018 to present</h5>
+                        <h3 className="museo-700">Em Em Digital</h3>
+                        <h4 className="museo">Owner &amp; Creative Director</h4>
+                      </Col>
+                    </Row>
+
 
                     <hr />
 
@@ -63,16 +81,21 @@ const ResumePage = ({data}) => {
               </li>
               
               <li className="timeline-inverted">
-                <div className="timeline-badge primary"><a><FontAwesomeIcon icon={faBullseye} color="#C5C7C5" /></a></div>
+                <div className="timeline-badge primary"><a><FontAwesomeIcon icon={faBullseye} /></a></div>
                 <div className="timeline-panel">
-                  <div className="timeline-heading">
-                  <Img className="img-fluid" fluid={data.zuno_studios.childImageSharp.fluid} />
-                  </div>
+
                   <div className="timeline-body p-4">
                     
-                    <h5 className="museo resume-date"><FontAwesomeIcon icon={faBriefcase} color="#252734" /> &nbsp;July 2018 to December 2018</h5>
-                    <h3 className="museo-700">Zuno Studios</h3>
-                    <h4 className="museo">Lead Web Developer</h4>
+                    <Row className="align-items-center">
+                    <Col xs="3">
+                        <Img className="img-fluid rounded-circle" fluid={data.zuno_studios.childImageSharp.fluid} />
+                      </Col>                      
+                      <Col xs="9">
+                        <h5 className="museo resume-date"><FontAwesomeIcon icon={faBriefcase} color="#252734" /> &nbsp;July 2018 to December 2018</h5>
+                        <h3 className="museo-700">Zuno Studios</h3>
+                        <h4 className="museo">Lead Web Developer</h4>
+                      </Col>
+                    </Row>
 
                     <hr />
 
@@ -84,16 +107,22 @@ const ResumePage = ({data}) => {
               </li>
 
               <li>
-                <div className="timeline-badge primary"><a><FontAwesomeIcon icon={faBullseye} color="#C5C7C5" /></a></div>
+                <div className="timeline-badge primary"><a><FontAwesomeIcon icon={faBullseye} /></a></div>
                 <div className="timeline-panel">
-                  <div className="timeline-heading">
-                  <Img className="img-fluid" fluid={data.dodgers.childImageSharp.fluid} />
-                  </div>
+
                   <div className="timeline-body p-4">
                     
-                    <h5 className="museo resume-date"><FontAwesomeIcon icon={faBriefcase} color="#252734" /> &nbsp;January 2015 to June 2018</h5>
-                    <h3 className="museo-700">Los Angeles Dodgers</h3>
-                    <h4 className="museo">Manager, Social Media, Digital &amp; Print Content<br /><small>Previous: Coordinator, Social Media</small></h4>
+                  <Row className="align-items-center">
+                      <Col xs="3">
+                        <Img className="img-fluid rounded-circle" fluid={data.dodgers.childImageSharp.fluid} />
+                      </Col>
+                      <Col xs="9">
+                        <h5 className="museo resume-date"><FontAwesomeIcon icon={faBriefcase} color="#252734" /> &nbsp;January 2015 to June 2018</h5>
+                        <h3 className="museo-700">Los Angeles Dodgers</h3>
+                        <h4 className="museo">Manager, Social Media, Digital &amp; Print Content<br /><small>Previous: Coordinator, Social Media</small></h4>
+                      </Col>
+                    </Row>
+
 
                     <hr />
 
@@ -114,17 +143,21 @@ const ResumePage = ({data}) => {
               </li>
 
               <li className="timeline-inverted">
-                <div className="timeline-badge primary"><a><FontAwesomeIcon icon={faBullseye} color="#C5C7C5" /></a></div>
+                <div className="timeline-badge primary"><a><FontAwesomeIcon icon={faBullseye} /></a></div>
                 <div className="timeline-panel">
-                  <div className="timeline-heading">
-                  <Img className="img-fluid" fluid={data.zuno_studios.childImageSharp.fluid} />
-                  </div>
+
                   <div className="timeline-body p-4">
                     
-                    <h5 className="museo resume-date"><FontAwesomeIcon icon={faBriefcase} color="#252734" /> &nbsp;June 2010 to December 2014</h5>
-                    <h3 className="museo-700">Zuno Studios</h3>
-                    <h4 className="museo">Web Developer<br /><small>Previous: Jr. Web Developer, Intern</small></h4>
-
+                  <Row className="align-items-center">
+                      <Col xs="3">
+                        <Img className="img-fluid rounded-circle" fluid={data.zuno_studios.childImageSharp.fluid} />
+                      </Col>
+                      <Col xs="9">
+                        <h5 className="museo resume-date"><FontAwesomeIcon icon={faBriefcase} color="#252734" /> &nbsp;June 2010 to December 2014</h5>
+                        <h3 className="museo-700">Zuno Studios</h3>
+                         <h4 className="museo">Web Developer<br /><small>Previous: Jr. Web Developer, Intern</small></h4>
+                      </Col>
+                    </Row>
                     <hr />
 
                     <ul className="museo">
@@ -141,21 +174,20 @@ const ResumePage = ({data}) => {
               </li>
 
               <li>
-                <div className="timeline-badge primary"><a><FontAwesomeIcon icon={faBullseye} color="#C5C7C5" /></a></div>
+                <div className="timeline-badge primary"><a><FontAwesomeIcon icon={faBullseye} /></a></div>
                 <div className="timeline-panel">
-                  <div className="timeline-heading">
-                  <Img className="img-fluid" fluid={data.csulb.childImageSharp.fluid} />
-                  </div>
+
                   <div className="timeline-body p-4">
-                    
-                    <h5 className="museo resume-date"><FontAwesomeIcon icon={faGraduationCap} color="#252734" /> &nbsp;May 2010</h5>
-                    <h3 className="museo-700">CSU Long Beach</h3>
-                    <h4 className="museo">Bachelor of Arts, Journalism<br /><small>Minor: Philosophy</small></h4>
-
-                    <hr />
-
-                    <p>GO BEACH!</p>
-
+                    <Row className="align-items-center">
+                      <Col xs="3">
+                        <Img className="img-fluid rounded-circle" fluid={data.csulb.childImageSharp.fluid} />
+                      </Col>
+                      <Col xs="9">
+                        <h5 className="museo resume-date"><FontAwesomeIcon icon={faGraduationCap} color="#252734" /> &nbsp;May 2010</h5>
+                        <h3 className="museo-700">CSU Long Beach</h3>
+                        <h4 className="museo">Bachelor of Arts, Journalism<br /><small>Minor: Philosophy</small></h4>
+                      </Col>
+                    </Row>
                   </div>
 
                 </div>
