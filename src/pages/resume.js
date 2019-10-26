@@ -9,6 +9,7 @@ import { config } from '@fortawesome/fontawesome-svg-core'
 config.autoAddCss = false
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBullseye, faGraduationCap, faBriefcase } from '@fortawesome/free-solid-svg-icons'
+import resumePDF from '../files/MESA-resume-2018.pdf'
 
 const ResumePage = ({data}) => {
 
@@ -39,7 +40,7 @@ const ResumePage = ({data}) => {
             <div className="text-center pb-3 pt-3">
               <h2 className="museo-700">Hi, I'm Matthew.</h2>
               <p className="lead">Fusce tincidunt sem nec tincidunt tincidunt. Phasellus vel neque suscipit, dignissim lectus ut, volutpat sem. Aenean blandit felis vitae accumsan consequat. Fusce semper odio eu elit sagittis placerat.</p>
-              <p><Button tag={Link} to={`/contact`} color="primary">Contact Me</Button> &nbsp;<Link to={`/`}>Download Resume (PDF)</Link></p>
+              <p><Button tag={Link} to={`/contact`} color="primary">Contact Me</Button> &nbsp;<a href={`./MESA-resume-2018.pdf`} download>Download Resume (PDF)</a></p>
             </div>
           </Col>
         </Row>
@@ -48,8 +49,8 @@ const ResumePage = ({data}) => {
       <div className="container-fluid">
           <ul className="timeline">
 
-              <li>
-                <div className="timeline-badge primary"><a><FontAwesomeIcon icon={faBullseye} /></a></div>
+              <li id="emem_digital">
+                <div className="timeline-badge primary"><a href="#emem_digital"><FontAwesomeIcon icon={faBullseye} /></a></div>
 
                 <div className="timeline-panel">
 
@@ -62,7 +63,7 @@ const ResumePage = ({data}) => {
                       <Col xs="9">
                       <h5 className="museo resume-date"><FontAwesomeIcon icon={faBriefcase} color="#252734" /> &nbsp;December 2018 to present</h5>
                         <h3 className="museo-700">Em Em Digital</h3>
-                        <h4 className="museo">Owner &amp; Creative Director</h4>
+                        <h4 className="museo">Owner &amp; Creative Director<br /><small>development, design, marketing, photography, video</small></h4>
                       </Col>
                     </Row>
 
@@ -80,8 +81,8 @@ const ResumePage = ({data}) => {
                 </div>
               </li>
               
-              <li className="timeline-inverted">
-                <div className="timeline-badge primary"><a><FontAwesomeIcon icon={faBullseye} /></a></div>
+              <li className="timeline-inverted" id="zuno_redux">
+                <div className="timeline-badge primary"><a href="#zuno_redux"><FontAwesomeIcon icon={faBullseye} /></a></div>
                 <div className="timeline-panel">
 
                   <div className="timeline-body p-4">
@@ -93,7 +94,7 @@ const ResumePage = ({data}) => {
                       <Col xs="9">
                         <h5 className="museo resume-date"><FontAwesomeIcon icon={faBriefcase} color="#252734" /> &nbsp;July 2018 to December 2018</h5>
                         <h3 className="museo-700">Zuno Studios</h3>
-                        <h4 className="museo">Lead Web Developer</h4>
+                        <h4 className="museo">Lead Web Developer<br /><small>CMS Development (Joomla &amp; WordPress)</small></h4>
                       </Col>
                     </Row>
 
@@ -106,8 +107,8 @@ const ResumePage = ({data}) => {
                 </div>
               </li>
 
-              <li>
-                <div className="timeline-badge primary"><a><FontAwesomeIcon icon={faBullseye} /></a></div>
+              <li id="dodgers">
+                <div className="timeline-badge primary"><a href="#dodgers"><FontAwesomeIcon icon={faBullseye} /></a></div>
                 <div className="timeline-panel">
 
                   <div className="timeline-body p-4">
@@ -142,8 +143,8 @@ const ResumePage = ({data}) => {
                 </div>
               </li>
 
-              <li className="timeline-inverted">
-                <div className="timeline-badge primary"><a><FontAwesomeIcon icon={faBullseye} /></a></div>
+              <li className="timeline-inverted" id="zuno">
+                <div className="timeline-badge primary"><a href="#zuno"><FontAwesomeIcon icon={faBullseye} /></a></div>
                 <div className="timeline-panel">
 
                   <div className="timeline-body p-4">
@@ -155,7 +156,7 @@ const ResumePage = ({data}) => {
                       <Col xs="9">
                         <h5 className="museo resume-date"><FontAwesomeIcon icon={faBriefcase} color="#252734" /> &nbsp;June 2010 to December 2014</h5>
                         <h3 className="museo-700">Zuno Studios</h3>
-                         <h4 className="museo">Web Developer<br /><small>Previous: Jr. Web Developer, Intern</small></h4>
+                         <h4 className="museo">Web Developer<br /><small>Previous: Jr. Web Developer; Intern</small></h4>
                       </Col>
                     </Row>
                     <hr />
@@ -173,8 +174,8 @@ const ResumePage = ({data}) => {
                 </div>
               </li>
 
-              <li>
-                <div className="timeline-badge primary"><a><FontAwesomeIcon icon={faBullseye} /></a></div>
+              <li id="csulb">
+                <div className="timeline-badge primary"><a href="#csulb"><FontAwesomeIcon icon={faBullseye} /></a></div>
                 <div className="timeline-panel">
 
                   <div className="timeline-body p-4">
@@ -195,6 +196,9 @@ const ResumePage = ({data}) => {
               
               <li class="clearfix" style={{float:'none'}}></li>
           </ul>
+
+          <p className="text-center"><a href={`./MESA-resume-2018.pdf`} className="btn btn-primary" download>Download Resume (PDF)</a></p>
+
         </div>
 
     </Layout>
