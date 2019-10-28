@@ -12,19 +12,28 @@ tags:
 - graphic design
 ---
 
-<h2 class="museo-700">what i did</h2>
+##what i did
                                 
-<hr class="green_to_blue_horizontal" />
+***
 
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+The Southwest Idaho Community for Emotionally Focused Therapy (SWIEFT) was looking for a brand-new website to attract new clients as well as therapists in the area.
 
-<h2 class="museo-700">how i did it</h2>
+I designed and built their website and I continue to provide support and direction.
 
-<hr class="green_to_blue_horizontal" />
+**Technologies used**: Bootstrap, Joomla!, PHP, jQuery, HTML, CSS
 
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+##how i did it
 
+***
 
-Welcome to my first ever Gatsby.js blog post. I really hope you enjoy this awesome content. The following will be some really cool lorem ipsum text.
+The client provided a basic content outline for their new website and I turned that into a wireframe.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+From the wireframe, we moved to some design examples of the homepage. The client wanted it to stand out when compared to other websites in the EFT field. After some research, I determined that that meant the website should be a little more bold and bright.
+
+Here is the initial homepage design that utilizes more of a modern look with the abstract shapes and illustrations:
+
+![Initial homepage deisgn for eftidaho.net](../../images/SWIEFT-homepage-mockup-v1-r0.jpg "Initial homepage design")
+
+The initial homepage design was done before a color palette was chosen based on their yet-to-be-created logo. Although they liked the purple in our initial design, the finished logo they provided did not include it. So, we went back to our original design, dropped the purple, used the colors from their logo and also decided to go with a darker body background in an effort to *really* differentiate the website from the others. Here's the approved design:
+
+![The approved homepage deisgn for eftidaho.net](../../images/SWIEFT-homepage-mockup-v2-r1.jpg "The approved homepage design")

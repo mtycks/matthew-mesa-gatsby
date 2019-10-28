@@ -38,8 +38,9 @@ const ResumePage = ({data}) => {
           <Col md={{size:8, offset:2}}>
             <div className="text-center pb-3 pt-3">
               <h2 className="museo-700">Hi, I'm Matthew.</h2>
-              <p className="lead">Fusce tincidunt sem nec tincidunt tincidunt. Phasellus vel neque suscipit, dignissim lectus ut, volutpat sem. Aenean blandit felis vitae accumsan consequat. Fusce semper odio eu elit sagittis placerat.</p>
-              <p><Button tag={Link} to={`/contact`} color="primary">Contact Me</Button> &nbsp;<a href={`./MESA-resume-2018.pdf`} download>Download Resume (PDF)</a></p>
+              <p>An experienced freelance web developer, graphic designer and former manager of social media for the Los Angeles Dodgers, seeking employment in all things digital: web development, graphic design, social and digital marketing, photography, video editing.</p>
+              <p><Button tag={Link} to={`/about`} color="primary">More About Me</Button> <Button tag={Link} to={`/contact`} color="primary">Contact Me</Button></p>
+              <p><a href={`./MESA-resume-2018.pdf`} download>Download Resume (PDF)</a></p>
             </div>
           </Col>
         </Row>
@@ -49,7 +50,7 @@ const ResumePage = ({data}) => {
           <ul className="timeline">
 
               <li id="emem_digital">
-                <div className="timeline-badge primary"><a href="#emem_digital"><FontAwesomeIcon icon={faBullseye} /></a></div>
+                <div className="timeline-badge primary"><a href="#emem_digital" title="1 year"><FontAwesomeIcon icon={faBullseye} /></a></div>
 
                 <div className="timeline-panel">
 
@@ -66,13 +67,19 @@ const ResumePage = ({data}) => {
                       </Col>
                     </Row>
 
-
                     <hr />
 
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce euismod ultrices laoreet.</p>
-                    <p>Fusce tincidunt sem nec tincidunt tincidunt. Phasellus vel neque suscipit, dignissim lectus ut, volutpat sem. Aenean blandit felis vitae accumsan consequat. Fusce semper odio eu elit sagittis placerat.</p>
-                    <p>Fusce consectetur varius neque, nec cursus velit accumsan vel. In hac habitasse platea dictumst. Proin varius ligula vel ligula porta, sit amet commodo felis euismod. Nam dolor lacus, auctor quis tincidunt sit amet, semper at nibh. Nam efficitur mauris non velit iaculis laoreet. Sed lacus ipsum, mollis tempus mi ac, faucibus dapibus enim. Curabitur ut massa non diam fermentum ultricies vitae eu dolor. Suspendisse nec facilisis mauris.</p>
+                    <p>Em Em Digital (DBA) is a company I started as a freelance web developer and graphic designer. This sole proprietorship serves over 10 clients and provides an array of digital services: web development; web design; graphic design; digital and social media marketing; photography; video editing.</p>
 
+                    <ul className="museo">
+                      <li>Worked with 10+ clients in various industries to build, maintain and upgrade their digital assets</li>
+                      <li>Designed and developed websites using CMSs and static website generators (GatsbyJS)</li>
+                      <li>Platforms included Joomla, WordPress, WooCommerce and Shopify</li>
+                      <li>Developed user interface (UI) and user experience (UX) updates for existing websites</li>
+                      <li>Support for email marketing campaigns (MailChimp) and built custom HTML email templates</li>
+                      <li>Updated SSL certificates for existing websites</li>
+                      <li>Provided creative and technical direction for updates to existing websites</li>
+                    </ul>
 
 
                   </div>
@@ -81,7 +88,7 @@ const ResumePage = ({data}) => {
               </li>
               
               <li className="timeline-inverted" id="zuno_redux">
-                <div className="timeline-badge primary"><a href="#zuno_redux"><FontAwesomeIcon icon={faBullseye} /></a></div>
+                <div className="timeline-badge primary"><a href="#zuno_redux" title="6 months"><FontAwesomeIcon icon={faBullseye} /></a></div>
                 <div className="timeline-panel">
 
                   <div className="timeline-body p-4">
@@ -99,15 +106,16 @@ const ResumePage = ({data}) => {
 
                     <hr />
 
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce euismod ultrices laoreet. Fusce tincidunt sem nec tincidunt tincidunt. Phasellus vel neque suscipit, dignissim lectus ut, volutpat sem. Aenean blandit felis vitae accumsan consequat. Fusce semper odio eu elit sagittis placerat. Fusce consectetur varius neque, nec cursus velit accumsan vel. In hac habitasse platea dictumst. Proin varius ligula vel ligula porta, sit amet commodo felis euismod. Nam dolor lacus, auctor quis tincidunt sit amet, semper at nibh. Nam efficitur mauris non velit iaculis laoreet. Sed lacus ipsum, mollis tempus mi ac, faucibus dapibus enim. Curabitur ut massa non diam fermentum ultricies vitae eu dolor. Suspendisse nec facilisis mauris.</p>
+                    <p>I returned to the company as the agency's lead web developer in July of 2018. Zuno Studios, unfortunately, closed its doors at the end of 2018 but three of their clients took me on as a freelance digital specialist.</p>
+                    <p><em><a href="#zuno">See below</a> for additional duties listed in my previous stint with the company.</em></p>
 
                   </div>
 
                 </div>
               </li>
 
-              <li id="dodgers">
-                <div className="timeline-badge primary"><a href="#dodgers"><FontAwesomeIcon icon={faBullseye} /></a></div>
+              <li className="timeline-inverted" id="dodgers">
+                <div className="timeline-badge primary"><a href="#dodgers" title="3+ years"><FontAwesomeIcon icon={faBullseye} /></a></div>
                 <div className="timeline-panel">
 
                   <div className="timeline-body p-4">
@@ -142,8 +150,8 @@ const ResumePage = ({data}) => {
                 </div>
               </li>
 
-              <li className="timeline-inverted" id="zuno">
-                <div className="timeline-badge primary"><a href="#zuno"><FontAwesomeIcon icon={faBullseye} /></a></div>
+              <li id="zuno">
+                <div className="timeline-badge primary"><a href="#zuno" title="4+ years"><FontAwesomeIcon icon={faBullseye} /></a></div>
                 <div className="timeline-panel">
 
                   <div className="timeline-body p-4">
@@ -173,7 +181,7 @@ const ResumePage = ({data}) => {
                 </div>
               </li>
 
-              <li id="csulb">
+              <li className="timeline-inverted" id="csulb">
                 <div className="timeline-badge primary"><a href="#csulb"><FontAwesomeIcon icon={faBullseye} /></a></div>
                 <div className="timeline-panel">
 
@@ -209,7 +217,7 @@ const ResumePage = ({data}) => {
 export const query = graphql`
 
     query{
-        header_img: file(relativePath: { eq: "contact_header.jpg" }) {
+        header_img: file(relativePath: { eq: "header_resume.jpg" }) {
           childImageSharp {
             fluid(maxWidth: 1600, quality: 100) {
               ...GatsbyImageSharpFluid

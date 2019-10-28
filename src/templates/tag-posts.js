@@ -1,9 +1,6 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/layout'
-import Post from '../components/Post'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars } from '@fortawesome/free-solid-svg-icons'
 import Img from 'gatsby-image'
 import { Row, Col} from 'reactstrap'
 import { slugify } from '../../util/utilityFunctions'
@@ -11,8 +8,6 @@ import { slugify } from '../../util/utilityFunctions'
 const tagPosts = ({ data, pageContext }) => {
 
     const { tag } = pageContext
-    const { totalCount } = data.allMarkdownRemark
-    const pageHeader = `${totalCount} post${totalCount === 1 ? '' : 's'} tagged with "${tag}"`
 
     return(
 

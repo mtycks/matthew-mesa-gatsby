@@ -246,6 +246,12 @@
   margin-top: 120px;
   margin-bottom: 120px;
 }
+
+.timeline > #dodgers.timeline-inverted,
+.timeline > #csulb.timeline-inverted{
+  margin-top:0;
+}
+
 .timeline > li:nth-child(2){
   margin-top: 120px;
 }
@@ -337,6 +343,12 @@
 
   .timeline > li.timeline-inverted > .timeline-badge{
     left: -11px;
+  }
+
+  .timeline > #dodgers.timeline-inverted,
+  .timeline > #csulb.timeline-inverted,
+  .timeline > #zuno{
+    margin-top:30px;
   }
 
 }

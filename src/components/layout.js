@@ -44,11 +44,11 @@ const Layout = ({ children }) => {
                 <Link style={ {color: '#51566e'} } to={`/contact`}>contact</Link> &bull;&nbsp; 
                 <Link style={ {color: '#51566e'} } to={`about`}>about</Link></p>
                 <p>
-                  <Link to={`/tag/graphic-design`}>graphic design</Link> &bull;&nbsp; 
-                  <Link to={`/tag/photo`}>photo</Link> &bull;&nbsp;
-                  <Link to={`/tag/social-media`}>social media</Link> <span className="d-none d-sm-inline-block">&bull;&nbsp;</span><br className="d-block d-sm-none" />
-                  <Link to={`/tag/video`}>video</Link> &bull;&nbsp; 
-                  <Link to={`/tag/web-dev`}>web dev</Link></p>
+                  <Link to={`/tags/graphic-design`}>graphic design</Link> &bull;&nbsp; 
+                  <Link to={`/tags/photo`}>photo</Link> &bull;&nbsp;
+                  <Link to={`/tags/social-media`}>social media</Link> <span className="d-none d-sm-inline-block">&bull;&nbsp;</span><br className="d-block d-sm-none" />
+                  <Link to={`/tags/video`}>video</Link> &bull;&nbsp; 
+                  <Link to={`/tags/web-dev`}>web dev</Link></p>
               </div>
               
             </div>

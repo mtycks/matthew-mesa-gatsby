@@ -94,7 +94,7 @@ exports.createPages = ({ actions, graphql}) => {
         //Create tag posts pages
         tags.forEach(tag => {
             createPage({
-                path: `/tag/${slugify(tag)}`,
+                path: `/tags/${slugify(tag)}`,
                 component: templates.tagPosts,
                 context: {
                     tag

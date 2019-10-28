@@ -12,7 +12,6 @@ import YouTubeEmbed from "../components/YouTube"
 const SinglePost = ({ data }) => {
 
     const post = data.markdownRemark.frontmatter
-    const video = post.videoSourceURL
 
     return (
 
@@ -41,12 +40,12 @@ const SinglePost = ({ data }) => {
                                     <Img className="img-fluid" fluid={post.mockup.childImageSharp.fluid} />
                                 </div>
 
-                                <div dangerouslySetInnerHTML={ {__html: data.markdownRemark.html} } />
+                                <div className="portfolio-item-body text-center" dangerouslySetInnerHTML={ {__html: data.markdownRemark.html} } />
 
                                 <ul className="post-tags">
                                     {post.tags.map(tag => (
                                         <li key={tag}>
-                                            <Link to={`/tag/${slugify(tag)}`}>
+                                            <Link to={`/tags/${slugify(tag)}`}>
                                                 <Badge color="primary">{tag}</Badge>
                                             </Link>
                                         </li>

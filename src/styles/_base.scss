@@ -4,7 +4,9 @@
   font-style: normal;
 }
 
-.museo-700 {
+.museo-700,
+p strong,
+.portfolio-item-body h2{
   font-family: 'Museo-700';
 }
 
@@ -132,6 +134,32 @@ section#hp_portfolio .portfolio-item{
 text-decoration:none;
 }
 
+.portfolio-item-body hr{
+
+  background: #39ff14; /* Old browsers */
+  background: -moz-linear-gradient(left,  #39ff14 1%, #005aea 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left,  #39ff14 1%,#005aea 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right,  #39ff14 1%,#005aea 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#39ff14', endColorstr='#005aea',GradientType=1 ); /* IE6-9 */
+
+  border:none;
+  display:inline-block;
+  height:5px;
+  margin-top:0;
+  width:25%;
+}
+
+.portfolio-item-body .gatsby-resp-image-wrapper{
+  padding:2px;
+  border:1px solid #EFEFEF;
+  max-width:80% !important;
+  margin-bottom:30px;
+}
+
+twitter-widget{
+  margin:0 auto 30px !important;
+}
+
 /* Gradient Styles */
 .green_to_blue_horizontal{
 background: #39ff14; /* Old browsers */
@@ -139,14 +167,6 @@ background: -moz-linear-gradient(left,  #39ff14 1%, #005aea 100%); /* FF3.6-15 *
 background: -webkit-linear-gradient(left,  #39ff14 1%,#005aea 100%); /* Chrome10-25,Safari5.1-6 */
 background: linear-gradient(to right,  #39ff14 1%,#005aea 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#39ff14', endColorstr='#005aea',GradientType=1 ); /* IE6-9 */
-}
-
-hr.green_to_blue_horizontal{
-border:none;
-display:inline-block;
-height:5px;
-margin-top:0;
-width:25%;
 }
 
 /* Main Menu Styles */
@@ -472,6 +492,33 @@ margin-top:-150px;
           animation-timing-function: ease-out;
 }
 }
+
+//Masonry Style Stuff
+.mm_masonry_row{
+  display: flex;
+  flex-flow: row wrap;
+  margin-left: 0px; /* Adjustment for the gutter */
+  width: 100%;
+}
+  .mm_masonry_row .img-masonry{
+    flex: auto;
+    height: 150px;
+    min-width: 150px;
+    margin: 0; /* Some gutter */
+  }
+
+    .img-masonry:nth-child(4n+1) {
+      width: 150px;
+    }
+    .img-masonry:nth-child(4n+2) {
+      width: 225px;
+    }
+    .img-masonry:nth-child(4n+3) {
+      width: 80px;
+    }
+    .img-masonry:nth-child(4n+4) {
+      width: 180px;
+    }
 
 
 

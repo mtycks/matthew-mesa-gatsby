@@ -31,11 +31,11 @@ const IndexPage = ({ data }) => (
               <h1 className="mt-3">matthew mesa</h1>
           
               <ul className="list-unstyled">
-                <li><Link to={`/tag/graphic-design`}>graphic design</Link></li>
-                <li><Link to={`/tag/photo`}>photo</Link></li>
-                <li><Link to={`/tag/social-media`}>social media</Link></li>
-                <li><Link to={`/tag/video`}>video</Link></li>
-                <li><Link to={`/tag/web-dev`}>web dev</Link></li>
+                <li><Link to={`/tags/graphic-design`}>graphic design</Link></li>
+                <li><Link to={`/tags/photo`}>photo</Link></li>
+                <li><Link to={`/tags/social-media`}>social media</Link></li>
+                <li><Link to={`/tags/video`}>video</Link></li>
+                <li><Link to={`/tags/web-dev`}>web dev</Link></li>
               </ul>
               </Col>
             </Row>
