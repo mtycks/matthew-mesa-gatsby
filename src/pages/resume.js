@@ -40,7 +40,7 @@ const ResumePage = ({data}) => {
               <h2 className="museo-700">Hi, I'm Matthew.</h2>
               <p>An experienced freelance web developer, graphic designer and former manager of social media for the Los Angeles Dodgers, seeking employment in all things digital: web development, graphic design, social and digital marketing, photography, video editing.</p>
               <p><Button tag={Link} to={`/about`} color="primary">More About Me</Button> <Button tag={Link} to={`/contact`} color="primary">Contact Me</Button></p>
-              <p><a href={`./MESA-resume-2018.pdf`} download>Download Resume (PDF)</a></p>
+              <p><a href="#">Download Resume (PDF)</a></p>
             </div>
           </Col>
         </Row>
@@ -204,7 +204,7 @@ const ResumePage = ({data}) => {
               <li class="clearfix" style={{float:'none'}}></li>
           </ul>
 
-          <p className="text-center"><a href={`./MESA-resume-2018.pdf`} className="btn btn-primary" download>Download Resume (PDF)</a></p>
+          <p className="text-center"><a href="#" className="btn btn-primary" download>Download Resume (PDF)</a></p>
 
         </div>
 
