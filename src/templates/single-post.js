@@ -21,10 +21,25 @@ const SinglePost = ({ data }) => {
             <section id="top" className="portfolio-item">
 		
                 <Img className="card-image-top" fluid={post.image.childImageSharp.fluid} />
+
+                {!post.mockup ?
+                    <div className="portfolio-item-titles">
+                        <div className="container">
+
+                            <Row>
+                                <Col md={{size:8, offset:2}}>
+                                    <h2 className="museo text-white mb-0 portfolio-item-title">{post.title}</h2>
+                                    <h5 className="museo text-green portfolio-item-subtitle mb-4">{post.subtitle}</h5>
+                                </Col>
+                            </Row>
+
+                        </div>
+                    </div>
+                : ''}
                 
             </section>
 
-            <div id="main" className="secondary-page">
+            <div id="main" className={post.mockup ? 'secondary-page' : 'secondary-page no-mockup'}>
 
                 <div className="container">
 
@@ -32,19 +47,20 @@ const SinglePost = ({ data }) => {
                         <Col md={{size:8, offset:2}}>
 
                         <div className="pb-3 pt-3">
-						
-                                <h2 className="museo text-white mb-0 portfolio-item-title">{post.title}</h2>
-                                <h5 className="museo text-green portfolio-item-subtitle mb-4">{post.subtitle}</h5>
                                 
-                                <div className="text-center">
-                                    <Img className="img-fluid" fluid={post.mockup.childImageSharp.fluid} />
-                                </div>
+                                {post.mockup ? <>
+                                    <h2 className="museo text-white mb-0 portfolio-item-title">{post.title}</h2>
+                                    <h5 className="museo text-green portfolio-item-subtitle mb-4">{post.subtitle}</h5>
+                                    <div className="text-center">
+                                        <Img className="img-fluid" fluid={post.mockup.childImageSharp.fluid} />
+                                    </div></>
+                                : ''}
 
                                 <div className="portfolio-item-body text-center" dangerouslySetInnerHTML={ {__html: data.markdownRemark.html} } />
 
-                                <ul className="post-tags">
+                                <ul className="text-center list-inline">
                                     {post.tags.map(tag => (
-                                        <li key={tag}>
+                                        <li key={tag} className="list-inline-item">
                                             <Link to={`/tags/${slugify(tag)}`}>
                                                 <Badge color="primary">{tag}</Badge>
                                             </Link>
@@ -80,7 +96,7 @@ export const postQuery = graphql`
                 tags
                 image{
                     childImageSharp{
-                        fluid(maxWidth: 1200){
+                        fluid(maxWidth: 1200, quality: 100){
                             ...GatsbyImageSharpFluid
                         }
                     }

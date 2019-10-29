@@ -383,6 +383,18 @@ footer a:visited{
 margin-top:-150px;
 }
 
+  #main.secondary-page.no-mockup{
+    margin-top:2rem;
+  }
+
+.portfolio-item-titles{
+  position: absolute;
+  width:100%;
+  padding-bottom:3rem;
+  bottom:0;
+  left:0;
+}
+
 .bounce-in-top {
 -webkit-animation: bounce-in-top 1.1s both;
         animation: bounce-in-top 1.1s both;
