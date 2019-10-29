@@ -6,7 +6,7 @@ author: "Matthew Mesa"
 image: ../../images/vin_header.jpg
 thumbnail: ../../images/vin_hp.jpg
 mockup: ../../images/asg-iphone.png
-order: 3
+order: 4
 tags:
 - graphic design
 - social media

@@ -6,7 +6,7 @@ author: "Matthew Mesa"
 image: ../../images/thompson_video_header.jpg
 thumbnail: ../../images/thompson_video_th.jpg
 mockup: ../../images/asg-iphone.png
-order: 5
+order: 6
 videoSourceURL: https://www.youtube.com/embed/dQw4w9WgXcQ
 videoTitle: Trayce Thompson Walk-off Home Run vs. Mets
 tags:
