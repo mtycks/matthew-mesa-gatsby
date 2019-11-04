@@ -20,7 +20,7 @@ The Southwest Idaho Community for Emotionally Focused Therapy (SWIEFT) was looki
 
 I designed and built their website and I continue to provide support and direction.
 
-**Technologies used**: Bootstrap, Joomla!, PHP, jQuery, HTML, CSS
+**Technologies used**: Bootstrap, Joomla!, PHP, MySQL, jQuery, HTML, CSS
 
 ##how i did it
 
