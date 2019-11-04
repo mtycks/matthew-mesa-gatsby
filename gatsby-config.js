@@ -44,21 +44,21 @@ module.exports = {
       
     },
     `@fortawesome/react-fontawesome`,
-    `gatsby-plugin-twitter`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
-          `gatsby-remark-embedder`,
           {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 1200,
             },
           },
+          `gatsby-remark-embedder`
         ],
       },
     },
+    `gatsby-plugin-twitter`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
