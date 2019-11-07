@@ -49,7 +49,7 @@ function MMSEO({ description, lang, meta, title, image }) {
         },
         {
           property: `og:image`,
-          content: image,
+          content: `https://matthewmesa.com${image}`,
         },
         {
           property: `og:image:width`,
@@ -65,7 +65,7 @@ function MMSEO({ description, lang, meta, title, image }) {
         },
         {
           property: `twitter:image`,
-          content: image,
+          content: `https://matthewmesa.com${image}`,
         },
         {
           property: `twitter:image:alt`,
