@@ -3,6 +3,7 @@ module.exports = {
     title: `Matthew Mesa is looking for a job`,
     description: `Welcome to MatthewMesa.com! I'm Matt; I wear a lot of hats (literally and figuratively) and I'm looking for a job.`,
     author: `Matthew Mesa`,
+    image: `ogimage.jpg`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

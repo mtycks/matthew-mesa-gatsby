@@ -1,14 +1,11 @@
 import React from 'react'
 import Layout from "../components/layout"
-import SEO from "../components/seo"
-import Post from "../components/Post"
+import MMSEO from "../components/seo_mm"
 import {graphql, StaticQuery, Link} from 'gatsby'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Row, Col, Button} from 'reactstrap'
 import Img from 'gatsby-image'
 import { slugify } from '../../util/utilityFunctions'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars } from '@fortawesome/free-solid-svg-icons'
 
 const IndexPage = ({ data }) => (
 
@@ -49,7 +46,11 @@ const IndexPage = ({ data }) => (
 
   <div className="container pt-3 pb-3">
 
-    <SEO title="Home" />
+    <MMSEO 
+      title="Home"
+      description="Matthew Mesa is an experienced freelance web developer, graphic designer and former manager of social media for the Los Angeles Dodgers, seeking employment in all things digital"
+      image={data.ogimage.childImageSharp.fixed.src}
+      />
 
     <Row>
 
@@ -139,7 +140,7 @@ query{
           order
           thumbnail{
             childImageSharp{
-              fluid(maxWidth: 260, quality: 80){
+              fluid(maxWidth:1200, quality:80){
                 ...GatsbyImageSharpFluid
               }
             }
@@ -149,6 +150,14 @@ query{
           slug
         }
         excerpt
+      }
+    }
+  }
+
+  ogimage: file(relativePath: { eq: "ogimage.jpg" }) {
+    childImageSharp {
+      fixed(width: 1200, quality:100) {
+        src
       }
     }
   }
