@@ -34,7 +34,6 @@ function MMSEO({ description, lang, meta, title, image }) {
         lang,
       }}
       title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
       meta={[
         {
           name: `description`,
@@ -42,7 +41,7 @@ function MMSEO({ description, lang, meta, title, image }) {
         },
         {
           property: `og:title`,
-          content: titleTemplate,
+          content: `${title} | ${site.siteMetadata.title}`,
         },
         {
           property: `og:description`,
@@ -69,6 +68,10 @@ function MMSEO({ description, lang, meta, title, image }) {
           content: image,
         },
         {
+          property: `twitter:image:alt`,
+          content: `matthew mesa dot com`,
+        },
+        {
           property: `og:type`,
           content: `website`,
         },
@@ -78,11 +81,11 @@ function MMSEO({ description, lang, meta, title, image }) {
         },
         {
           name: `twitter:creator`,
-          content: site.siteMetadata.author,
+          content: `@mtycks`,
         },
         {
           name: `twitter:title`,
-          content: titleTemplate,
+          content: `${title} | ${site.siteMetadata.title}`,
         },
         {
           name: `twitter:description`,
