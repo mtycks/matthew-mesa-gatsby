@@ -42,7 +42,7 @@ function MMSEO({ description, lang, meta, title, image }) {
         },
         {
           property: `og:title`,
-          content: title,
+          content: titleTemplate,
         },
         {
           property: `og:description`,
@@ -82,7 +82,7 @@ function MMSEO({ description, lang, meta, title, image }) {
         },
         {
           name: `twitter:title`,
-          content: title,
+          content: titleTemplate,
         },
         {
           name: `twitter:description`,
