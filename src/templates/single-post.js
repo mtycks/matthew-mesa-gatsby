@@ -22,7 +22,7 @@ const SinglePost = ({ data }) => {
 		
                 <Img className="card-image-top" fluid={post.image.childImageSharp.fluid} />
 
-                {!post.mockup ?
+                {(!post.mockup && !post.videoSourceURL) ?
                     <div className="portfolio-item-titles">
                         <div className="container">
 
@@ -39,7 +39,7 @@ const SinglePost = ({ data }) => {
                 
             </section>
 
-            <div id="main" className={post.mockup ? 'secondary-page' : 'secondary-page no-mockup'}>
+            <div id="main" className={(post.mockup || post.videoSourceURL) ? 'secondary-page' : 'secondary-page no-mockup'}>
 
                 <div className="container">
 
@@ -53,6 +53,16 @@ const SinglePost = ({ data }) => {
                                     <h5 className="museo text-green portfolio-item-subtitle mb-4">{post.subtitle}</h5>
                                     <div className="text-center">
                                         <Img className="img-fluid" fluid={post.mockup.childImageSharp.fluid} />
+                                    </div></>
+                                : ''}
+
+                                {post.videoSourceURL ? <>
+                                    <h2 className="museo text-white mb-0 portfolio-item-title">{post.title}</h2>
+                                    <h5 className="museo text-green portfolio-item-subtitle mb-4">{post.subtitle}</h5>
+                                    <div className="text-center mb-5">
+                                      <div class="embed-responsive embed-responsive-16by9">
+                                            <iframe class="embed-responsive-item" src={post.videoSourceURL} allowfullscreen></iframe>
+                                        </div>
                                     </div></>
                                 : ''}
 

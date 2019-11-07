@@ -15,7 +15,7 @@ tags:
 
 ***
 
-To commemorate my nephew's first hat trick, I created this social media graphic for his parents to share. It was the first game I attended and I happened to grab a usable photo that I could use. After he scored his third goal, I jokingly said I was going to throw my hat onto the ice. I didn't end up doing that but that gave me an idea to make a graphic and include some hats on the ice.
+To commemorate my nephew's first hat trick, I created this social media graphic for his parents to share. It was the first game I attended and I happened to grab a usable photo that I could use. After he scored his third goal, I jokingly said I was going to throw my hat onto the ice. I didn't end up doing that (because I'm a responsible adult and I really like the hat I was wearing that day) but that gave me an idea to make a graphic and include some hats on the ice.
 
 ![Back of Elijah playing hockey](../../images/em_hat_trick_photo.jpg "Back of Elijah playing hockey")
 

@@ -4,7 +4,7 @@ import SEO from "../components/seo"
 import Post from "../components/Post"
 import {graphql, StaticQuery, Link} from 'gatsby'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { Row, Col} from 'reactstrap'
+import { Row, Col, Button} from 'reactstrap'
 import Img from 'gatsby-image'
 import { slugify } from '../../util/utilityFunctions'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -96,6 +96,10 @@ const IndexPage = ({ data }) => (
                 // />
 
               ))}
+
+              <Col md={{size:6, offset:3}}>
+                <Button color="primary" block href="/portfolio">View Full Portfolio</Button>
+              </Col>
             
             </Row>
           )
@@ -120,7 +124,10 @@ const indexQuery = graphql`
 
 query{
 
-  allMarkdownRemark(sort: { fields: [frontmatter___order], order: ASC}){
+  allMarkdownRemark(
+    sort: { fields: [frontmatter___order], order: ASC}
+    limit: 8
+  ){
     edges{
       node{
         id
