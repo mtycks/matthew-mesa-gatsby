@@ -64,7 +64,6 @@ const IndexPage = ({ data }) => (
             <p className="lead">Hi, I'm Matthew Mesa and <br className="d-block d-sm-none" />I'm looking for a job.</p>
             <p>Professionally, I’ve been a web developer, social media manager, graphic designer, photographer, video editor and writer. I used to work for the Los Angeles Dodgers and Zuno Studios, a small web design studio based in Signal Hill, CA.</p>
             <p>Personally, I'm a husband and father who just really loves to create cool stuff—hopefully my wife and son never get tired of me pointing a camera in their faces.</p>
-            <p className="lead">Blah, blah, blah...I know you just want to see my work. So, here it is:</p>
 
           </div>
 
