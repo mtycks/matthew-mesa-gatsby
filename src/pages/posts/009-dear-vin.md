@@ -25,9 +25,6 @@ The 2016 season marked the final season of Vin Scully's incredible career as the
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">5 solid <a href="https://twitter.com/hashtag/smsports?src=hash&amp;ref_src=twsrc%5Etfw">#smsports</a> ideas for inspiration. <a href="https://t.co/Os03pkqSYN">https://t.co/Os03pkqSYN</a> <a href="https://t.co/GB99MflpA0">pic.twitter.com/GB99MflpA0</a></p>&mdash; Jess Smith (@WarJessEagle) <a href="https://twitter.com/WarJessEagle/status/780773395323432960?ref_src=twsrc%5Etfw">September 27, 2016</a></blockquote>
 
-![instagram](BKtcj5sDqR3)
-
-
 ##how i did it
 
 ***
