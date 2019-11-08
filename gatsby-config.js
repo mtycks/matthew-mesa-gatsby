@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Matthew Mesa is looking for a job`,
-    description: `Welcome to MatthewMesa.com! I'm Matt; I wear a lot of hats (literally and figuratively) and I'm looking for a job.`,
+    title: `Matthew Mesa is a free agent`,
+    description: `Welcome to MatthewMesa.com! I'm Matt; I wear a lot of hats (literally and figuratively) and I'm a free agent`,
     author: `Matthew Mesa`,
-    image: `ogimage.jpg`,
+    image: `https://matthewmesa.com/static/ogimage.jpg`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
