@@ -81,7 +81,7 @@ const IndexPage = ({ data }) => (
 
                 <Col key={index} xs={{ size: 6, offset: 0 }} md={{ size: 3, offset: 0 }}>
                   <Link to={`/portfolio/${slugify(node.fields.slug)}`} className="portfolio-item">			    
-                    <Img fluid={node.frontmatter.thumbnail.childImageSharp.fluid} />
+                    <Img alt={node.frontmatter.title} fluid={node.frontmatter.thumbnail.childImageSharp.fluid} />
                   </Link>
                 </Col>
 
