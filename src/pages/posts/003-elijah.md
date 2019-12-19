@@ -5,7 +5,7 @@ date: 2019-10-06 15:22:00
 author: "Matthew Mesa"
 image: ../../images/em_hat_trick_header.jpg
 thumbnail: ../../images/em_hat_trick.jpg
-order: 3
+order: 2
 tags:
 - graphic design
 - photo
