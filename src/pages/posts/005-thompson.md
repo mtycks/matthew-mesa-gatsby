@@ -5,7 +5,7 @@ date: 2019-10-06 15:22:00
 author: "Matthew Mesa"
 image: ../../images/thompson_video_header.jpg
 thumbnail: ../../images/thompson_video_th.jpg
-order: 6
+order: 9
 videoSourceURL: https://youtube.com/embed/KK_1zaSyf6k
 videoTitle: Trayce Thompson Walk-off Home Run vs. Mets
 tags:

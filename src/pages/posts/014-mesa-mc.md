@@ -1,15 +1,14 @@
 ---
-title: "Purity Organic"
-subtitle: "Shopify Custom Development"
+title: "Mesa Water District"
+subtitle: "Mailchimp Email Template"
 date: 2019-12-19 15:22:00
 author: "Matthew Mesa"
 image: ../../images/th_si_cover.jpg
-thumbnail: ../../images/purity_hp.jpg
-order: 3
+thumbnail: ../../images/mesa_mc_hp.jpg
+order: 8
 tags:
+- mailchimp
 - web dev
-- ecommerce
-- shopify
 ---
 
 ##what i did

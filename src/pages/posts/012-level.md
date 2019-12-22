@@ -5,7 +5,7 @@ date: 2019-12-19 15:22:00
 author: "Matthew Mesa"
 image: ../../images/th_si_cover.jpg
 thumbnail: ../../images/level_hp.jpg
-order: 3
+order: 6
 tags:
 - web dev
 - ecommerce
