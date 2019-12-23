@@ -156,6 +156,14 @@ text-decoration:none;
   margin-bottom:30px;
 }
 
+.portfolio-item-body h2{
+  margin-top:90px;
+}
+
+.portfolio-item-body h2:first-child{
+  margin-top:0;
+}
+
 twitter-widget{
   margin:0 auto 30px !important;
 }
