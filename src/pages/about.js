@@ -26,20 +26,6 @@ const AboutPage = ({ data }) => (
     </section>
 
     <section id="about_body">
-      <Row>
-        <Col md={{size:12}}>
-          <div className="mm_masonry_row">
-            <Img className="img-masonry" fluid={data.mm_wedding_day.childImageSharp.fluid} />
-            <Img className="img-masonry" fluid={data.mm_fam_disney_world.childImageSharp.fluid} />
-            <Img className="img-masonry" fluid={data.mm_vs_hotwing.childImageSharp.fluid} />
-            <Img className="img-masonry" fluid={data.mm_fam_ws.childImageSharp.fluid} />
-            <Img className="img-masonry" fluid={data.mm_ap_lv.childImageSharp.fluid} />
-            <Img className="img-masonry" fluid={data.mm_milo_beach.childImageSharp.fluid} />
-            <Img className="img-masonry" fluid={data.mm_jb_fiji.childImageSharp.fluid} />
-            <Img className="img-masonry" fluid={data.mm_magic.childImageSharp.fluid} />
-          </div>
-        </Col>
-      </Row>
       <div className="container mt-5">
         <Row>
           <Col md={{size:8, offset:2}}>
@@ -73,62 +59,6 @@ const AboutPage = ({ data }) => (
 export const query = graphql`
   query {
     header_img: file(relativePath: { eq: "header_about.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 1600, quality: 100) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    mm_wedding_day: file(relativePath: { eq: "mm_wedding_day.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 1600, quality: 100) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    mm_fam_disney_world: file(relativePath: { eq: "mm_fam_disney_world.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 1600, quality: 100) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    mm_vs_hotwing: file(relativePath: { eq: "mm_vs_hotwing.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 1600, quality: 100) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    mm_fam_ws: file(relativePath: { eq: "mm_fam_ws.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 1600, quality: 100) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    mm_ap_lv: file(relativePath: { eq: "mm_ap_lv.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 1600, quality: 100) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    mm_jb_fiji: file(relativePath: { eq: "mm_jb_fiji.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 1600, quality: 100) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    mm_milo_beach: file(relativePath: { eq: "mm_milo_beach.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 1600, quality: 100) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    mm_magic: file(relativePath: { eq: "mm_magic.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1600, quality: 100) {
           ...GatsbyImageSharpFluid
