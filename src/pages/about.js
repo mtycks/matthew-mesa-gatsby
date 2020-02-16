@@ -53,13 +53,13 @@ const AboutPage = ({ data }) => (
             <ol class="museo">
               <li>I'm Guamanian (<a href="https://en.wikipedia.org/wiki/Chamorro_people" target="_blank">Chamorro</a>) and part Japanese</li>
               <li>I'm the middle child of five</li>
-              <li>My middle name is Anthony</li>
+              <li>I bowled a <a href="https://californiabowlingnews.businesscatalyst.com/assets/042910.pdf" target="_blank">300 game in 2010</a></li>
               <li>I have a cartoon-like fear of lizards</li>
               <li>My typical coffee order is one sugar, no cream</li>
               <li>The first place I visited outside of the U.S. was Japan in 2001</li>
               <li>I have four tattoos</li>
               <li>I've never seen <em>Scarface</em> or any of <em>The Godfather</em> movies</li>
-              <li>My favorite superhero is Batman (I even enjoyed <em>Batman Forver</em>)</li>
+              <li>My favorite superhero is Batman (I even enjoyed <em>Batman Forever</em>)</li>
               <li>I played the <a href="https://en.wikipedia.org/wiki/Baritone_horn">baritone</a> in my middle school concert band</li>
             </ol>
           </Col>
