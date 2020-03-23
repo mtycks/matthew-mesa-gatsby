@@ -126,7 +126,7 @@ query{
 
   allMarkdownRemark(
     sort: { fields: [frontmatter___order], order: ASC}
-    limit: 8
+    limit: 12
   ){
     edges{
       node{
