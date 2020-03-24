@@ -153,6 +153,7 @@ text-decoration:none;
 
 .portfolio-item .portfolio-main-image{
   border-radius:20px;
+  margin-bottom:1rem;
 }
 
 .portfolio-item .portfolio-details{
@@ -575,7 +576,10 @@ footer a:visited{
       width: 180px;
     }
 
-
+//Lightbox stuff
+.openModal{
+  cursor: pointer;
+}
 
 // Bootstrap Style Overrides
 .badge-primary{

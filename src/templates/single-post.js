@@ -5,6 +5,7 @@ import SEO from '../components/seo'
 import { Container, Row, Col, Badge } from 'reactstrap'
 import Img from 'gatsby-image'
 import { slugify } from '../../util/utilityFunctions'
+import LightboxGallery from '../components/lightbox'
 
 const SinglePost = ({ data }) => {
 
@@ -26,21 +27,15 @@ const SinglePost = ({ data }) => {
                             <h2 className="museo text-white mb-0 portfolio-item-title">{post.title}</h2>
                             <h5 className="museo text-green portfolio-item-subtitle">{post.subtitle}</h5>
                             {post.liveURL &&
-                                <p><a href={post.liveURL} className="btn btn-primary" target="_blank" rel="nofollow">View live project</a></p>
+                                <p><a href={post.liveURL} className="btn btn-primary btn-block" target="_blank" rel="nofollow">view live project</a></p>
                             }
+                            
                         </Col>
 
                         {post.images &&
 
-                            
-                            <Col className="portfolio-item-images"  md={{size:6, order: 3}} xs={{size:12, order:2}}>
-                                <Row>
-                                {post.images.map((additionalImage, index) => (
-                                    <Col xs="3" key={index}>
-                                        <Img className="portfolio-main-image" fluid={additionalImage.childImageSharp.fluid} objectPosition="top center" />
-                                    </Col>
-                                ))}
-                                </Row>
+                            <Col className="portfolio-item-images"  md={{size:12, order: 3}} xs={{size:12, order:2}}>
+                                <LightboxGallery images={post.images} />
                             </Col>
                             
                         }
@@ -61,8 +56,8 @@ const SinglePost = ({ data }) => {
 
                                 {post.videoSourceURL ? <>
                                     <div className="text-center mb-5">
-                                      <div class="embed-responsive embed-responsive-16by9">
-                                            <iframe class="embed-responsive-item" src={post.videoSourceURL} allowfullscreen></iframe>
+                                      <div className="embed-responsive embed-responsive-16by9">
+                                            <iframe className="embed-responsive-item" src={post.videoSourceURL} allowfullscreen></iframe>
                                         </div>
                                     </div></>
                                 : ''}
@@ -114,8 +109,9 @@ export const postQuery = graphql`
                     }
                 }
                 images{
+                    publicURL,
                     childImageSharp{
-                        fluid(maxWidth:200, maxHeight:200, quality: 75){
+                        fluid(maxWidth:300, maxHeight:300, quality: 75, cropFocus:NORTH){
                             ...GatsbyImageSharpFluid
                         }
                     }
