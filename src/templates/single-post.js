@@ -2,7 +2,7 @@ import React from 'react'
 import Layout from '../components/layout'
 import { graphql, Link } from 'gatsby'
 import SEO from '../components/seo'
-import { Row, Col, Card, CardBody, CardSubtitle, Badge } from 'reactstrap'
+import { Container, Row, Col, Card, CardBody, CardSubtitle, Badge } from 'reactstrap'
 import Img from 'gatsby-image'
 import { slugify } from '../../util/utilityFunctions'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -15,27 +15,38 @@ const SinglePost = ({ data }) => {
 
     return (
 
-        <Layout>
+        <Layout secondary="true">
             <SEO title={post.title} />
 
             <section id="top" className="portfolio-item">
-		
-                <Img className="card-image-top" fluid={post.image.childImageSharp.fluid} />
+                
+                <Container>
+                    <Row>
+                        <Col  md={{size:6, order: 1}} xs={{size:12, order:2}}>
+                            <Img className="portfolio-main-image" fluid={post.image.childImageSharp.fluid} />
+                        </Col>
+                        <Col className="portfolio-details" md={{size:6, order: 2}} xs={{size:12, order:1}}>
+                            <h2 className="museo text-white mb-0 portfolio-item-title">{post.title}</h2>
+                            <h5 className="museo text-green portfolio-item-subtitle mb-4">{post.subtitle}</h5>
+                        </Col>
 
-                {(!post.mockup && !post.videoSourceURL) ?
-                    <div className="portfolio-item-titles">
-                        <div className="container">
+                        {post.images &&
 
-                            <Row>
-                                <Col md={{size:8, offset:2}}>
-                                    <h2 className="museo text-white mb-0 portfolio-item-title">{post.title}</h2>
-                                    <h5 className="museo text-green portfolio-item-subtitle mb-4">{post.subtitle}</h5>
-                                </Col>
-                            </Row>
+                            
+                            <Col className="portfolio-item-images"  md={{size:6, order: 3}} xs={{size:12, order:2}}>
+                                <Row>
+                                {post.images.map((additionalImage, index) => (
+                                    <Col xs="3" key={index}>
+                                        <Img className="portfolio-main-image" fluid={additionalImage.childImageSharp.fluid} objectPosition="top center" />
+                                    </Col>
+                                ))}
+                                </Row>
+                            </Col>
+                            
+                        }
 
-                        </div>
-                    </div>
-                : ''}
+                    </Row>
+                </Container>
                 
             </section>
 
@@ -47,14 +58,6 @@ const SinglePost = ({ data }) => {
                         <Col md={{size:8, offset:2}}>
 
                         <div className="pb-3 pt-3">
-                                
-                                {post.mockup ? <>
-                                    <h2 className="museo text-white mb-0 portfolio-item-title">{post.title}</h2>
-                                    <h5 className="museo text-green portfolio-item-subtitle mb-4">{post.subtitle}</h5>
-                                    <div className="text-center">
-                                        <Img className="img-fluid" fluid={post.mockup.childImageSharp.fluid} />
-                                    </div></>
-                                : ''}
 
                                 {post.videoSourceURL ? <>
                                     <h2 className="museo text-white mb-0 portfolio-item-title">{post.title}</h2>
@@ -107,6 +110,13 @@ export const postQuery = graphql`
                 image{
                     childImageSharp{
                         fluid(maxWidth: 1200, quality: 100){
+                            ...GatsbyImageSharpFluid
+                        }
+                    }
+                }
+                images{
+                    childImageSharp{
+                        fluid(maxWidth:200, maxHeight:200, quality: 75){
                             ...GatsbyImageSharpFluid
                         }
                     }

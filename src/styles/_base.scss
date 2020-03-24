@@ -53,7 +53,16 @@ font-size:1rem;
 
 /* Homepage Styles */
 section#top{
-position:relative;
+  background-image:url('../images/triangle-mosaic-dark.png');
+  background-repeat:repeat;
+  position:relative;
+}
+
+section#top.portfolio-item{
+  background-image:url('../images/triangle-mosaic-dark.png');
+  background-repeat:repeat;
+  padding:5rem 0 2rem;
+  position:relative;
 }
 
 section#top picture img{
@@ -68,6 +77,10 @@ section#top picture img{
   left: 0;
   width: 100%;
 }
+
+.menu-toggle.secondary{
+}
+
 .menu-toggle .fa{
   font-size:2rem;
   color:#FFFFFF;
@@ -132,6 +145,21 @@ section#hp_portfolio .portfolio-item{
 
 .menu-toggle .mm_home:hover{
 text-decoration:none;
+}
+
+.portfolio-item-images{
+  margin-top:1rem;
+}
+
+.portfolio-item .portfolio-main-image{
+  border-radius:20px;
+}
+
+.portfolio-item .portfolio-details{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  text-align:center;
 }
 
 .portfolio-item-body hr{
@@ -393,7 +421,7 @@ footer a:visited{
 }
 
 #main.secondary-page{
-margin-top:-150px;
+
 }
 
   #main.secondary-page.no-mockup{

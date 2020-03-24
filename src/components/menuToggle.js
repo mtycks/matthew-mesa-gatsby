@@ -7,7 +7,7 @@ import { faBars } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'gatsby'
 import {  Row, Col } from 'reactstrap';
 
-const MenuToggle = () => {
+const MenuToggle = ({secondary}) => {
 
   const [isVisible, setIsVisible] = useState(false);
 
@@ -15,9 +15,11 @@ const MenuToggle = () => {
     setIsVisible(!isVisible);
   };
 
+  const toggleClass = (secondary === "true") ? 'secondary' : 'primary';
+
   return (
     <>
-      <div className="menu-toggle pt-3">
+      <div className={`menu-toggle pt-3 ${toggleClass}`}>
         <div className="container">
           <Row>
             <Col xs={{size:12, offset:0}}>

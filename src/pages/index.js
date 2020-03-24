@@ -9,7 +9,7 @@ import { slugify } from '../../util/utilityFunctions'
 
 const IndexPage = ({ data }) => (
 
-  <Layout>
+  <Layout secondary="false">
 
   <section id="top">
 

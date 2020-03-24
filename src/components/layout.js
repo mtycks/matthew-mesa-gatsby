@@ -11,7 +11,7 @@ import { useStaticQuery, graphql, Link } from "gatsby"
 import '../styles/index.scss'
 import MenuToggle from "../components/menuToggle"
 
-const Layout = ({ children }) => {
+const Layout = ({ children, secondary }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -26,7 +26,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <MenuToggle />
+      <MenuToggle secondary={secondary} />
       <div className="full-width" id="content">
         <main>{children}</main>
         <footer>
