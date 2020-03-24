@@ -28,11 +28,11 @@ export default class LightboxGallery extends Component {
     const {images} = this.state;
 
     return (
-      <Row>
+      <Row className="portfolio-gallery">
           
         {images.map((additionalImage, index) => (
             
-            <Col xs="3" key={index}>
+            <Col xs="6" sm="4" lg="3" key={index}>
                 <div className="openModal" onClick={() => this.setState({ isOpen: true, photoIndex:index })}>
                     <Img 
                         className="portfolio-main-image" 

@@ -153,7 +153,7 @@ text-decoration:none;
 
 .portfolio-item .portfolio-main-image{
   border-radius:20px;
-  margin-bottom:1rem;
+  margin-bottom:2rem;
 }
 
 .portfolio-item .portfolio-details{
@@ -177,6 +177,8 @@ text-decoration:none;
   width:25%;
 }
 
+.portfolio-gallery{}
+
 .portfolio-item-body .gatsby-resp-image-wrapper{
   padding:2px;
   border:1px solid #EFEFEF;
@@ -190,10 +192,6 @@ text-decoration:none;
 
 .portfolio-item-body h2:first-child{
   margin-top:0;
-}
-
-twitter-widget{
-  margin:0 auto 30px !important;
 }
 
 #hp_portfolio .btn-primary{
@@ -428,7 +426,7 @@ footer a:visited{
 }
 
   #main.secondary-page.no-mockup{
-    margin-top:2rem;
+    margin-top:0;
   }
 
 .portfolio-item-titles{
