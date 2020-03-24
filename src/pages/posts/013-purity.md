@@ -10,6 +10,7 @@ tags:
 - web dev
 - ecommerce
 - shopify
+liveURL: "https://purityorganic.com"
 ---
 
 ##what i did

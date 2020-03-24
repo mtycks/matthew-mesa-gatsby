@@ -11,6 +11,7 @@ videoTitle: Trayce Thompson Walk-off Home Run vs. Mets
 tags:
 - video
 - social media
+liveURL: "https://www.youtube.com/watch?v=KK_1zaSyf6k"
 ---
 
 ##what i did

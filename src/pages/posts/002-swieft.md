@@ -10,6 +10,7 @@ order: 1
 tags:
 - web dev
 - graphic design
+liveURL: "https://eftidaho.net/"
 ---
 
 ##what i did

@@ -2,12 +2,9 @@ import React from 'react'
 import Layout from '../components/layout'
 import { graphql, Link } from 'gatsby'
 import SEO from '../components/seo'
-import { Container, Row, Col, Card, CardBody, CardSubtitle, Badge } from 'reactstrap'
+import { Container, Row, Col, Badge } from 'reactstrap'
 import Img from 'gatsby-image'
 import { slugify } from '../../util/utilityFunctions'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars } from '@fortawesome/free-solid-svg-icons'
-import YouTubeEmbed from "../components/YouTube"
 
 const SinglePost = ({ data }) => {
 
@@ -25,9 +22,12 @@ const SinglePost = ({ data }) => {
                         <Col  md={{size:6, order: 1}} xs={{size:12, order:2}}>
                             <Img className="portfolio-main-image" fluid={post.image.childImageSharp.fluid} />
                         </Col>
-                        <Col className="portfolio-details" md={{size:6, order: 2}} xs={{size:12, order:1}}>
+                        <Col className="portfolio-details" md={{size:5, offset:1, order: 2}} xs={{size:12, offset: 0, order:1}}>
                             <h2 className="museo text-white mb-0 portfolio-item-title">{post.title}</h2>
-                            <h5 className="museo text-green portfolio-item-subtitle mb-4">{post.subtitle}</h5>
+                            <h5 className="museo text-green portfolio-item-subtitle">{post.subtitle}</h5>
+                            {post.liveURL &&
+                                <p><a href={post.liveURL} className="btn btn-primary" target="_blank" rel="nofollow">View live project</a></p>
+                            }
                         </Col>
 
                         {post.images &&
@@ -57,11 +57,9 @@ const SinglePost = ({ data }) => {
                     <Row>
                         <Col md={{size:8, offset:2}}>
 
-                        <div className="pb-3 pt-3">
+                        <div className="pb-5 pt-5">
 
                                 {post.videoSourceURL ? <>
-                                    <h2 className="museo text-white mb-0 portfolio-item-title">{post.title}</h2>
-                                    <h5 className="museo text-green portfolio-item-subtitle mb-4">{post.subtitle}</h5>
                                     <div className="text-center mb-5">
                                       <div class="embed-responsive embed-responsive-16by9">
                                             <iframe class="embed-responsive-item" src={post.videoSourceURL} allowfullscreen></iframe>
@@ -69,7 +67,7 @@ const SinglePost = ({ data }) => {
                                     </div></>
                                 : ''}
 
-                                <div className="portfolio-item-body text-center" dangerouslySetInnerHTML={ {__html: data.markdownRemark.html} } />
+                                <div className="portfolio-item-body" dangerouslySetInnerHTML={ {__html: data.markdownRemark.html} } />
 
                                 <ul className="text-center list-inline">
                                     {post.tags.map(tag => (
@@ -107,6 +105,7 @@ export const postQuery = graphql`
                 author
                 date(formatString: "MMM D, YYYY")
                 tags
+                liveURL
                 image{
                     childImageSharp{
                         fluid(maxWidth: 1200, quality: 100){

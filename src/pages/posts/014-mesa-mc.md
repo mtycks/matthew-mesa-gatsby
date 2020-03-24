@@ -9,6 +9,7 @@ order: 8
 tags:
 - mailchimp
 - web dev
+liveURL: "https://mesawater.org/news/newsletters"
 ---
 
 ##what i did

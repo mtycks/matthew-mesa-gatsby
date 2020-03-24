@@ -159,7 +159,6 @@ text-decoration:none;
   display:flex;
   flex-direction:column;
   justify-content:center;
-  text-align:center;
 }
 
 .portfolio-item-body hr{
@@ -241,7 +240,10 @@ z-index:5000;
 display:none;
 }
 
-
+.gatsby-resp-image-wrapper {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
 
 .slide-in-top {
 -webkit-animation: slide-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;

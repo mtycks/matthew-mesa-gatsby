@@ -1,6 +1,6 @@
 ---
 title: "Rando the Basebot"
-subtitle: "PWA Concept"
+subtitle: "Twitter Bot"
 date: 2019-10-06 15:22:00
 author: "Matthew Mesa"
 image: ../../images/rando_header.jpg
@@ -9,6 +9,7 @@ order: 4
 tags:
 - web dev
 - graphic design
+liveURL: "https://randothebasebot.com/"
 ---
 
 ##what i did
