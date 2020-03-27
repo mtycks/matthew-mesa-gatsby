@@ -3,25 +3,32 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Img from 'gatsby-image'
 import {graphql} from 'gatsby'
-import {Row, Col} from 'reactstrap'
+import {Container, Row, Col} from 'reactstrap'
+import LightboxGallery from '../components/lightbox'
 
 const AboutPage = ({ data }) => (
-  <Layout>
+
+  <Layout secondary="true">
     <SEO title="About" />
 
-    <section id="top">
-        
-        <Img className="card-image-top" fluid={data.header_img.childImageSharp.fluid} />
-        
-        <div className="text-box pt-5">
+    <section id="top" className="portfolio-item">
+                
+        <Container>
+            <Row>
+                <Col  md={{size:6, order: 1}} xs={{size:12, order:2}}>
+                    <Img className="portfolio-main-image" fluid={data.header_img.childImageSharp.fluid} />
+                </Col>
+                <Col className="portfolio-details" md={{size:5, offset:1, order: 2}} xs={{size:12, offset: 0, order:1}}>
+                    <h2 className="museo text-white mb-0 portfolio-item-title">About me</h2>
+                    <h5 className="museo text-green portfolio-item-subtitle">matthew mesa</h5>
+                </Col>
 
-            <div className="text-center portfolio-header">
+                <Col className="portfolio-item-images"  md={{size:12, order: 3}} xs={{size:12, order:2}}>
+                      <LightboxGallery images={[data.wedding_img, data.kiddos_img, data.emmy_img, data.milo_img]} />
+                  </Col>
 
-                <h1 className="h2 contact-header-title">About</h1>
-
-            </div>
-            
-        </div>
+            </Row>
+        </Container>
         
     </section>
 
@@ -58,9 +65,41 @@ const AboutPage = ({ data }) => (
 
 export const query = graphql`
   query {
-    header_img: file(relativePath: { eq: "header_about.jpg" }) {
+    header_img: file(relativePath: { eq: "about_header.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1600, quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    },
+    wedding_img: file(relativePath: { eq: "about_wedding.jpg" }) {
+      publicURL,
+      childImageSharp {
+        fluid(maxWidth:300, maxHeight:300, quality: 75, cropFocus:NORTH){
+          ...GatsbyImageSharpFluid
+        }
+      }
+    },
+    kiddos_img: file(relativePath: { eq: "about_kiddos.jpg" }) {
+      publicURL,
+      childImageSharp {
+        fluid(maxWidth:300, maxHeight:300, quality: 75, cropFocus:NORTH){
+          ...GatsbyImageSharpFluid
+        }
+      }
+    },
+    emmy_img: file(relativePath: { eq: "about_1.jpg" }) {
+      publicURL,
+      childImageSharp {
+        fluid(maxWidth:300, maxHeight:300, quality: 75, cropFocus:NORTH){
+          ...GatsbyImageSharpFluid
+        }
+      }
+    },
+    milo_img: file(relativePath: { eq: "milo_portraits/milo_5.jpg" }) {
+      publicURL,
+      childImageSharp {
+        fluid(maxWidth:300, maxHeight:300, quality: 75, cropFocus:NORTH){
           ...GatsbyImageSharpFluid
         }
       }
