@@ -13,7 +13,7 @@ tags:
 - graphic design
 - photo
 liveURL: "https://ememrecipes.com"
-images: ['../../images/recipes_0.jpg', '../../images/recipes_5.jpg', '../../images/recipes_6.jpg', '../../images/recipes_3.jpg', '../../images/recipes_4.jpg']
+images: ['../../images/recipes_0.jpg', '../../images/recipes_5.jpg', '../../images/recipes_6.jpg', '../../images/recipes_3-v2.jpg', '../../images/recipes_4-v2.jpg']
 ---
 
 ##what i did
