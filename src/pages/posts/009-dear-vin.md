@@ -9,7 +9,7 @@ order: 9
 tags:
 - graphic design
 - social media
-liveURL: "https://twitter.com/Dodgers/status/779061234440085505"
+liveURL: "https://twitter.com/hashtag/DearVin"
 ---
 
 ##what i did

@@ -96,10 +96,6 @@ const IndexPage = ({ data }) => (
                 // />
 
               ))}
-
-              <Col md={{size:6, offset:3}}>
-                <Button color="primary" block href="/portfolio">View Full Portfolio</Button>
-              </Col>
             
             </Row>
           )
@@ -126,7 +122,6 @@ query{
 
   allMarkdownRemark(
     sort: { fields: [frontmatter___order], order: ASC}
-    limit: 12
   ){
     edges{
       node{
