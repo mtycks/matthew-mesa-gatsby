@@ -65,7 +65,7 @@ const AboutPage = ({ data }) => (
 
 export const query = graphql`
   query {
-    header_img: file(relativePath: { eq: "about_header.jpg" }) {
+    header_img: file(relativePath: { eq: "about_header_v2.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1600, quality: 100) {
           ...GatsbyImageSharpFluid
