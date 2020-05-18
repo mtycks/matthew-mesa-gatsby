@@ -7,7 +7,7 @@ import Img from 'gatsby-image'
 import { slugify } from '../../util/utilityFunctions'
 import LightboxGallery from '../components/lightbox'
 
-const SinglePost = ({ data }) => {
+const PortfolioItem = ({ data }) => {
 
     const post = data.markdownRemark.frontmatter
 
@@ -88,7 +88,7 @@ const SinglePost = ({ data }) => {
 }
 
 export const postQuery = graphql`
-    query blogPostByUUID($uuid: String!){
+    query portfolioItemByUUID($uuid: String!){
         markdownRemark(fields: { uuid: { eq: $uuid }}){
             id
             html
@@ -128,4 +128,4 @@ export const postQuery = graphql`
     }
 `
 
-export default SinglePost
+export default PortfolioItem

@@ -122,6 +122,7 @@ query{
 
   allMarkdownRemark(
     sort: { fields: [frontmatter___order], order: ASC}
+    filter: {fileAbsolutePath: {regex: "/(portfolio-items)/"  }}
   ){
     edges{
       node{

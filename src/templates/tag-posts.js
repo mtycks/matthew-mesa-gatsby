@@ -68,7 +68,10 @@ export const tagQuery = graphql`
 
         allMarkdownRemark(
             sort: { fields: [frontmatter___date], order: DESC }
-            filter: { frontmatter: { tags: { in: [$tag] } } }
+            filter: { 
+                frontmatter: { tags: { in: [$tag] } } 
+                fileAbsolutePath: {regex: "/(portfolio-items)/"  }
+            }
         ){
             totalCount
             edges{

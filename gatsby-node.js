@@ -1,3 +1,4 @@
+const { v4: uuidv4 } = require('uuid');
 const { slugify } = require('./util/utilityFunctions')
 const path = require('path')
 const _ = require('lodash') 
@@ -15,6 +16,13 @@ exports.onCreateNode = ({ node, actions }) => {
             value: slugFromTitle
         })
 
+        //Add a unique identifier 
+        createNodeField({
+            node,
+            name: 'uuid',
+            value: uuidv4()
+        })
+
     }
 
 }
@@ -24,7 +32,8 @@ exports.createPages = ({ actions, graphql}) => {
     const { createPage } = actions;
 
     const templates = {
-        singlePost: path.resolve('src/templates/single-post.js'),
+        portfolioPost: path.resolve('src/templates/portfolio-item.js'),
+        blogPost: path.resolve('src/templates/single-post.js'),
         tagsPage: path.resolve('src/templates/tags-page.js'),
         tagPosts: path.resolve('src/templates/tag-posts.js')
     }
@@ -32,7 +41,7 @@ exports.createPages = ({ actions, graphql}) => {
     return graphql(`
     
         {
-            allMarkdownRemark{
+            blogPosts: allMarkdownRemark( filter: {fileAbsolutePath: {regex: "/(blog)/"  }} ){
                 edges{
                     node{
                         frontmatter{
@@ -41,6 +50,21 @@ exports.createPages = ({ actions, graphql}) => {
                         }
                         fields{
                             slug
+                            uuid
+                        }
+                    }
+                }
+            }
+            portfolioItems: allMarkdownRemark( filter: {fileAbsolutePath: {regex: "/(portfolio-items)/"  }} ){
+                edges{
+                    node{
+                        frontmatter{
+                            author
+                            tags
+                        }
+                        fields{
+                            slug
+                            uuid
                         }
                     }
                 }
@@ -50,16 +74,33 @@ exports.createPages = ({ actions, graphql}) => {
     `).then(res => {
         if(res.errors) return Promise.reject(res.errors)
 
-        const posts = res.data.allMarkdownRemark.edges
-
-        posts.forEach(({node}) => {
+        //Create the individual portfolio pages
+        const portfolioItems = res.data.portfolioItems.edges
+        portfolioItems.forEach(({node}) => {
 
             createPage({
                 path: `/portfolio/${node.fields.slug}`,
-                component: templates.singlePost,
+                component: templates.portfolioPost,
                 context: {
                     //Passing slug for template to use to get post
-                    slug: node.fields.slug
+                    slug: node.fields.slug,
+                    uuid: node.fields.uuid
+                }
+            })
+
+        })
+
+        //Create the blog post pages
+        const blogPosts = res.data.blogPosts.edges
+        blogPosts.forEach(({node}) => {
+
+            createPage({
+                path: `/blog/${node.fields.slug}`,
+                component: templates.blogPost,
+                context: {
+                    //Passing slug for template to use to get post
+                    slug: node.fields.slug,
+                    uuid: node.fields.uuid
                 }
             })
 
@@ -68,7 +109,7 @@ exports.createPages = ({ actions, graphql}) => {
         // Get all tags
         // the underscore is a lodash function
         let tags = []
-        _.each(posts, edge =>{
+        _.each(portfolioItems, edge =>{
             if(_.get(edge, 'node.frontmatter.tags')){
                 tags = tags.concat(edge.node.frontmatter.tags)
             }

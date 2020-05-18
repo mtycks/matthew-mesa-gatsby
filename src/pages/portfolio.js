@@ -68,7 +68,10 @@ const indexQuery = graphql`
 
 query{
 
-  allMarkdownRemark(sort: { fields: [frontmatter___order], order: ASC}){
+  allMarkdownRemark(
+      filter: {fileAbsolutePath: {regex: "/(portfolio-items)/"  }}
+      sort: { fields: [frontmatter___order], order: ASC}
+    ){
     edges{
       node{
         id
