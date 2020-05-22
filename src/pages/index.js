@@ -46,7 +46,7 @@ const IndexPage = ({ data }) => (
 	</section>
 
 
-  <Container id="hp_main_content" className="py-5">
+  <Container id="hp_main_content" className="pt-5">
 
     <MMSEO 
       title="Home"
@@ -81,7 +81,7 @@ const IndexPage = ({ data }) => (
               <Row>
 
                 <Col xs="12">
-                  <h2 className="text-center museo-700 mb-5">Portfolio</h2>
+                  <h2 className="text-center museo-700 mb-3">Portfolio</h2>
                 </Col>
 
                 {data.allMarkdownRemark.edges.map(({ node }, index) =>(
