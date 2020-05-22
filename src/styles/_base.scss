@@ -50,11 +50,25 @@ font-size:1rem;
   z-index: 10;
 }
 
+// Button Overrides
+.btn{
+  border-radius:20px !important;
+  font-family:'Museo-700' !important;
+  padding-left:1.5rem !important;
+  padding-right:1.5rem !important;
+}
+
+.btn-primary{
+  background-color:#0f4165db !important;
+  border-color:#0f4165db !important;
+}
 
 /* Homepage Styles */
 section#top{
   background-image:url('../images/triangle-mosaic-dark.png');
   background-repeat:repeat;
+  border-radius:0 0 20px 20px;
+  overflow:hidden;
   position:relative;
 }
 
@@ -132,15 +146,51 @@ overflow:hidden;
   height:auto !important;
 }
 
+#hp_intro__wrapper{
+  background-color:#53576d;
+  border-radius:20px;
+  color:#FFFFFF !important;
+  padding:3rem;
+}
+
+.hp_intro__image .gatsby-image-wrapper{
+  border:5px solid #FFFFFF;
+  border-radius:20px;
+  box-shadow:1px 3px 2px rgba(0,0,0,.24);
+}
+
+#hp_intro .hp_intro__text,
+#hp_intro .hp_intro__text p{
+  color:rgba(255,255,255,.9);
+}
+
+#hp_intro .hp_intro__text p:last-child{
+  margin-bottom:0;
+}
+
+#hp_intro .hp_intro__image,
+#hp_intro .hp_intro__text{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+#hp_intro .icon-link{
+  color:#FFFFFF;
+  margin-right:1rem;
+}
+
 section#hp_portfolio .portfolio-item{
+  border-radius:20px;
   box-shadow:1px 3px 2px rgba(0,0,0,.24);
   display:block;
   margin-bottom:2rem;
+  overflow:hidden;
 }
 
 .portfolio-item-title,
 .portfolio-item-subtitle{
-  text-transform: lowercase;;
+  text-transform: lowercase;
 }
 
 .menu-toggle .mm_home:hover{
@@ -657,6 +707,20 @@ blockquote:after {
       object-position:center -10vh !important;
     }
 
+}
+
+@media(max-width:991px){
+  .hp_intro__image{
+    margin-bottom:2rem;
+  }
+  .hp_intro__text{
+    text-align:center;
+  }
+  #hp_intro .icon-link{
+    display:inline-block;
+    margin-bottom:0;
+    margin-top:1.5rem;
+  }
 }
 
 @media(min-width:1200px){
