@@ -196,7 +196,7 @@ query{
     }
   }
 
-  mm_profile: file(relativePath: { eq: "mm_profile.jpg" }) {
+  mm_profile: file(relativePath: { eq: "mm_profile_v2.jpg" }) {
     childImageSharp {
       fluid(maxWidth: 500) {
         ...GatsbyImageSharpFluid
