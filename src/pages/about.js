@@ -38,7 +38,7 @@ const AboutPage = ({ data }) => (
           <Col md={{size:8, offset:2}}>
             <h2 className="museo-700 mb-3">Hi, I'm Matt!</h2>
             <h5 class="museo-700">Professional Life</h5>
-            <p>I'm currently a freelance web developer, graphic designer and all-around digital specialist looking to join a team full-time.</p>
+            <p>I'm currently a content creator at Casanova//McCann and have professional experience as a web developer, graphic designer and all-around digital specialist.</p>
             <p>I have over three years of experience managing the social media accounts for the Los Angeles Dodgers and over five years of experience building and designing websites.</p>
             <p>My web specialty is in content management system (CMS) development but I still love learning new technologies (e.g., this site is built using <a href="https://www.gatsbyjs.org/" target="_blank">GatsbyJS</a>, a static site generator built on top of <a href="https://reactjs.org/" target="_blank">React</a>).</p>
             <h5 class="museo-700">Personal Life</h5>

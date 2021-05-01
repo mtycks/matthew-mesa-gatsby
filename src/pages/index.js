@@ -65,7 +65,7 @@ const IndexPage = ({ data }) => (
             </Col>
             <Col lg={{size:"9"}} md={{size:"12"}} className="hp_intro__text">
 
-              <h3 className="museo-700">Hi, I'm Matthew Mesa and I'm a free agent.</h3>
+              <h3 className="museo-700">Hi, I'm Matthew Mesa</h3>
               <p>Professionally, I’ve been a web developer, social media manager, graphic designer, photographer, video editor and writer.</p>
               <p>Personally, I'm a husband and father of two who just really loves to create cool stuff—hopefully my wife and kids never get tired of me pointing a camera in their faces.</p>
               <p><Link to="/about" className="btn btn-primary">About Me</Link> <Link to="/resume" className="btn btn-primary ml-1 mx-2">My Resume</Link> <br className="d-block d-lg-none" /> <a href="https://github.com/mtycks" target="_blank" rel="noreferrer" className="icon-link"><FontAwesomeIcon icon={faGithub} size="lg" /></a> <a href="https://twitter.com/mtycks" target="_blank" rel="noreferrer" className="icon-link"><FontAwesomeIcon icon={faTwitter} size="lg" /></a> <a href="https://instagram.com/mtycks" target="_blank" rel="noreferrer" className="icon-link"><FontAwesomeIcon icon={faInstagram} size="lg" /></a> <a href="https://www.linkedin.com/in/matthew-mesa-0bb8b626/" target="_blank" rel="noreferrer" className="icon-link"><FontAwesomeIcon icon={faLinkedin} size="lg" /></a> </p>

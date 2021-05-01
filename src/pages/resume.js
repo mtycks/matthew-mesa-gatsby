@@ -38,7 +38,7 @@ const ResumePage = ({data}) => {
           <Col md={{size:8, offset:2}}>
             <div className="text-center pb-3 pt-3">
               <h2 className="museo-700">Hi, I'm Matthew.</h2>
-              <p>An experienced freelance web developer, graphic designer and former manager of social media for the Los Angeles Dodgers, seeking employment in all things digital: web development, graphic design, social and digital marketing, photography, video editing.</p>
+              <p>An experienced freelance web developer, graphic designer and former manager of social media for the Los Angeles Dodgers.</p>
               <p><Button tag={Link} to={`/about`} color="primary">More About Me</Button> <Button tag={Link} to={`/contact`} color="primary">Contact Me</Button></p>
             </div>
           </Col>
