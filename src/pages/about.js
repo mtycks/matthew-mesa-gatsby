@@ -40,7 +40,7 @@ const AboutPage = ({ data }) => (
             <h5 class="museo-700">Professional Life</h5>
             <p>I'm currently a freelance web developer, graphic designer and all-around digital specialist looking to join a team full-time.</p>
             <p>I have over three years of experience managing the social media accounts for the Los Angeles Dodgers and over five years of experience building and designing websites.</p>
-            <p>My web specialty is in content managment system (CMS) development but I still love learning new technologies (e.g., this site is built using <a href="https://www.gatsbyjs.org/" target="_blank">GatsbyJS</a>, a static site generator built on top of <a href="https://reactjs.org/" target="_blank">React</a>).</p>
+            <p>My web specialty is in content management system (CMS) development but I still love learning new technologies (e.g., this site is built using <a href="https://www.gatsbyjs.org/" target="_blank">GatsbyJS</a>, a static site generator built on top of <a href="https://reactjs.org/" target="_blank">React</a>).</p>
             <h5 class="museo-700">Personal Life</h5>
             <p>Here are ten facts about me in case you're ever put in a life-or-death scenario where you're forced to answer questions about me:</p>
             <ol class="museo">
