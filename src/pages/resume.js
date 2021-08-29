@@ -37,8 +37,8 @@ const ResumePage = ({data}) => {
         <Row>
           <Col md={{size:8, offset:2}}>
             <div className="text-center pb-3 pt-3">
-              <h2 className="museo-700">Hi, I'm Matthew.</h2>
-              <p>An experienced freelance web developer, graphic designer and former manager of social media for the Los Angeles Dodgers.</p>
+              <h2 className="museo-700">Hi, I'm Matt.</h2>
+              <p>An experienced content creator, freelance web developer, graphic designer, photographer, video editor and former manager of social media for the Los Angeles Dodgers.</p>
               <p><Button tag={Link} to={`/about`} color="primary">More About Me</Button> <Button tag={Link} to={`/contact`} color="primary">Contact Me</Button></p>
             </div>
           </Col>
@@ -48,8 +48,40 @@ const ResumePage = ({data}) => {
       <div className="container-fluid">
           <ul className="timeline">
 
-              <li id="emem_digital">
-                <div className="timeline-badge primary"><a href="#emem_digital" title="1 year"><FontAwesomeIcon icon={faBullseye} /></a></div>
+          <li id="casanova">
+                <div className="timeline-badge primary"><a href="#casanova" title="1 year"><FontAwesomeIcon icon={faBullseye} /></a></div>
+
+                <div className="timeline-panel">
+
+                  <div className="timeline-body p-4">
+                    
+                    <Row className="align-items-center">
+                      <Col xs={{size:6, offset:3}} sm={{size:3, offset:0}}>
+                        <Img className="img-fluid rounded-circle" fluid={data.casanova.childImageSharp.fluid} />
+                      </Col>
+                      <Col xs="12" sm="9" className="resume-item-details">
+                        <h5 className="museo resume-date"><FontAwesomeIcon icon={faBriefcase} color="#252734" /> &nbsp;January 2021 to present</h5>
+                        <h3 className="museo-700">Casanova//McCann</h3>
+                        <h4 className="museo">Content Creator<br /><small>video, graphic design, photography, motion graphics</small></h4>
+                      </Col>
+                    </Row>
+
+                    <hr />
+
+                    <ul className="museo">
+                      <li>Conceptualizes, strategizes, writes, produces, directs, shoots and edits original video content for high-profile clients (Chevrolet, Nestlé).</li>
+                      <li>Graphic design specifically for digital platforms including: social media, websites and online advertisements.</li>
+                      <li>Work alongside social, production and broadcast teams to plan and ideate content based upon clients’ needs.</li>
+                    </ul>
+
+
+                  </div>
+
+                </div>
+              </li>
+
+              <li id="emem_digital" className="timeline-inverted">
+                <div className="timeline-badge primary"><a href="#emem_digital" title="2 years"><FontAwesomeIcon icon={faBullseye} /></a></div>
 
                 <div className="timeline-panel">
 
@@ -60,7 +92,7 @@ const ResumePage = ({data}) => {
                         <Img className="img-fluid rounded-circle" fluid={data.emem_digital.childImageSharp.fluid} />
                       </Col>
                       <Col xs="12" sm="9" className="resume-item-details">
-                        <h5 className="museo resume-date"><FontAwesomeIcon icon={faBriefcase} color="#252734" /> &nbsp;December 2018 to present</h5>
+                        <h5 className="museo resume-date"><FontAwesomeIcon icon={faBriefcase} color="#252734" /> &nbsp;December 2018 to December 2020</h5>
                         <h3 className="museo-700">Em Em Digital</h3>
                         <h4 className="museo">Owner &amp; Creative Director<br /><small>development, design, marketing, photography, video</small></h4>
                       </Col>
@@ -86,7 +118,7 @@ const ResumePage = ({data}) => {
                 </div>
               </li>
               
-              <li className="timeline-inverted" id="zuno_redux">
+              <li id="zuno_redux">
                 <div className="timeline-badge primary"><a href="#zuno_redux" title="6 months"><FontAwesomeIcon icon={faBullseye} /></a></div>
                 <div className="timeline-panel">
 
@@ -243,6 +275,13 @@ export const query = graphql`
           }
         },
         csulb: file(relativePath: { eq: "resume-csulb.jpg" }) {
+          childImageSharp {
+            fluid(maxWidth: 1600, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        },
+        casanova: file(relativePath: { eq: "resume-casanova.jpg" }) {
           childImageSharp {
             fluid(maxWidth: 1600, quality: 100) {
               ...GatsbyImageSharpFluid
