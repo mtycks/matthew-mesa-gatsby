@@ -65,7 +65,7 @@ const AboutPage = ({ data }) => (
 
 export const query = graphql`
   query {
-    header_img: file(relativePath: { eq: "about_header_v2.jpg" }) {
+    header_img: file(relativePath: { eq: "about_header_v3.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1600, quality: 100) {
           ...GatsbyImageSharpFluid
@@ -80,7 +80,7 @@ export const query = graphql`
         }
       }
     },
-    kiddos_img: file(relativePath: { eq: "about_kiddos.jpg" }) {
+    kiddos_img: file(relativePath: { eq: "MMM_4751.jpg" }) {
       publicURL,
       childImageSharp {
         fluid(maxWidth:300, maxHeight:300, quality: 75, cropFocus:NORTH){
@@ -88,7 +88,7 @@ export const query = graphql`
         }
       }
     },
-    emmy_img: file(relativePath: { eq: "about_1.jpg" }) {
+    emmy_img: file(relativePath: { eq: "emmy_in_a_dress.jpg" }) {
       publicURL,
       childImageSharp {
         fluid(maxWidth:300, maxHeight:300, quality: 75, cropFocus:NORTH){
@@ -96,7 +96,7 @@ export const query = graphql`
         }
       }
     },
-    milo_img: file(relativePath: { eq: "milo_portraits/milo_5.jpg" }) {
+    milo_img: file(relativePath: { eq: "milo_in_a_tie.jpg" }) {
       publicURL,
       childImageSharp {
         fluid(maxWidth:300, maxHeight:300, quality: 75, cropFocus:NORTH){

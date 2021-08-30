@@ -100,7 +100,7 @@ const ResumePage = ({data}) => {
 
                     <hr />
 
-                    <p>Em Em Digital (DBA) is a company I started as a freelance web developer and graphic designer. This sole proprietorship serves over 10 clients and provides an array of digital services: web development; web design; graphic design; digital and social media marketing; photography; video editing.</p>
+                    <p>Em Em Digital (DBA) is a company I started as a freelance web developer and graphic designer. This sole proprietorship served over 10 clients and provided an array of digital services: web development; web design; graphic design; digital and social media marketing; photography; video editing.</p>
 
                     <ul className="museo">
                       <li>Worked with 10+ clients in various industries to build, maintain and upgrade their digital assets</li>
