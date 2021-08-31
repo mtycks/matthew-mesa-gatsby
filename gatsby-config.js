@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Matthew Mesa is a free agent`,
-    description: `Welcome to MatthewMesa.com! I'm Matt; I wear a lot of hats (literally and figuratively) and I'm a free agent`,
+    title: `Matthew Mesa`,
+    description: `Welcome to MatthewMesa.com! I'm Matt; I wear a lot of hats (literally and figuratively)`,
     author: `Matthew Mesa`,
     image: `https://matthewmesa.com/static/ogimage.jpg`,
   },
