@@ -5,7 +5,7 @@ date: 2019-10-06 15:22:00
 author: "Matthew Mesa"
 image: ../../images/rando_header.jpg
 thumbnail: ../../images/rando_hp.jpg
-order: 4
+order: 7
 tags:
 - web dev
 - graphic design

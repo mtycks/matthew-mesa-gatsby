@@ -5,7 +5,7 @@ date: 2019-12-19 15:22:00
 author: "Matthew Mesa"
 image: ../../images/purity_header.jpg
 thumbnail: ../../images/purity_hp.jpg
-order: 3
+order: 11
 tags:
 - web dev
 - ecommerce

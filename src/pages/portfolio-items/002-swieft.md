@@ -6,7 +6,7 @@ author: "Matthew Mesa"
 image: ../../images/swieft_header.jpg
 thumbnail: ../../images/swieft.jpg
 mockup: ../../images/swieft_mockup.png
-order: 1
+order: 10
 tags:
 - web dev
 - graphic design
