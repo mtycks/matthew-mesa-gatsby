@@ -9,7 +9,7 @@ order: 3
 tags:
 - video
 - graphic design
-videoSourceURL: https://youtube.com/embed/sn1Es_gUwE4
+videoSourceURL: "https://youtube.com/embed/sn1Es_gUwE4?autoplay=1&loop=1&mute=1&iv_load_policy=3&showinfo=0&modestbranding=1&ref=0"
 videoTitle: "Chevrolet - Silverado Memories"
 ---
 
@@ -18,7 +18,5 @@ videoTitle: "Chevrolet - Silverado Memories"
 ***
 
 Our awesome creative team at Casanova//McCann came up with this concept for a recent social ad buy. I was handed static mockups as Illustrator files and I turned it into an animated video in After Effects.
-
-I particularly like how the dust cloud subtly forms when the final two photos are dropped on the dirt.
 
 
