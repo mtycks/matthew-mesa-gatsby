@@ -5,7 +5,7 @@ date: 2020-03-27 15:22:00
 author: "Matthew Mesa"
 image: ../../images/ws_header.jpg
 thumbnail: ../../images/ws_hp.jpg
-order: 5
+order: 10
 tags:
 - social media
 - graphic design

@@ -5,7 +5,7 @@ date: 2019-10-06 15:22:00
 author: "Matthew Mesa"
 image: ../../images/th_si_cover.jpg
 thumbnail: ../../images/hp_si_cover.jpg
-order: 9
+order: 10
 videoSourceURL: https://youtube.com/embed/FgC1g-e0zjE
 videoTitle: Justin Turner and Yasiel Puig Sports Illustrated Cover (photo by Jon SooHoo)
 tags:

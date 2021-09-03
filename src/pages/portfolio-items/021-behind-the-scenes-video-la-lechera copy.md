@@ -4,8 +4,8 @@ subtitle: "La Lechera for Casanova//McCann"
 date: 2019-10-06 15:22:00
 author: "Matthew Mesa"
 image: ../../images/cm_bts_header.jpg
-thumbnail: ../../images/cm_bts_th.jpg
-order: 1
+thumbnail: ../../images/cm_bts_2_th.jpg
+order: 2
 videoSourceURL: https://youtube.com/embed/1FaJ3nMvbWs
 videoTitle: "Casanova//McCann: Behind the Scenes La Lechera Photoshoot"
 tags:

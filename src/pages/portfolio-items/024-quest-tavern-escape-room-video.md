@@ -5,7 +5,7 @@ date: 2019-10-06 15:22:00
 author: "Matthew Mesa"
 image: ../../images/quest_header.jpg
 thumbnail: ../../images/quest_th.jpg
-order: 3
+order: 4
 tags:
 - video
 - graphic design

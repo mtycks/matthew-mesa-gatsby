@@ -5,7 +5,7 @@ date: 2020-03-23 15:22:00
 author: "Matthew Mesa"
 image: ../../images/recipes_header.jpg
 thumbnail: ../../images/recipes_hp2.jpg
-order: 5
+order: 10
 tags:
 - web dev
 - gatsbyjs

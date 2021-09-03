@@ -5,7 +5,7 @@ date: 2019-10-06 15:22:00
 author: "Matthew Mesa"
 image: ../../images/ws-trophy-header.jpg
 thumbnail: ../../images/ws-trophy.jpg
-order: 4
+order: 5
 videoSourceURL: https://youtube.com/embed/M-36U3aQZ7g
 videoTitle: "The Coolest Paperweight I've Ever Owned"
 tags:

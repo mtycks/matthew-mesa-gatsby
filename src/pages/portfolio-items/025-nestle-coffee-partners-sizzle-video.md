@@ -5,7 +5,7 @@ date: 2019-10-06 15:22:00
 author: "Matthew Mesa"
 image: ../../images/sizzle_header.jpg
 thumbnail: ../../images/sizzle_th.jpg
-order: 3
+order: 5
 tags:
 - video
 - graphic design
